@@ -1,0 +1,203 @@
+[
+  {
+    "id": "brand-kit-fidelity",
+    "version": 1,
+    "medium": "image",
+    "isDraft": false,
+    "title": "Brand kit fidelity",
+    "rationale": "Real content work is constrained work. A model that ignores a supplied palette and typeface is unusable for a brand however pretty its output. Uses a public synthetic brand kit so anyone can re-run this without our customers' assets.",
+    "prompt": "A launch announcement image for the brand in the supplied kit. Follow the kit palette exactly, use the kit wordmark once at the size the kit specifies, and leave the lower third clear for caption text. Subject: a single ceramic mug on a concrete surface, hard side light.",
+    "referenceRoles": [
+      "brand-kit"
+    ],
+    "outputSpec": {
+      "aspectRatio": "1:1",
+      "count": 1
+    },
+    "rubric": [
+      "Are the kit's hex values actually the ones on screen?",
+      "Is the wordmark reproduced without distortion or invention?",
+      "Is the lower third genuinely clear?",
+      "Does it look like a brand asset rather than a stock photo"
+    ]
+  },
+  {
+    "id": "character-consistency",
+    "version": 1,
+    "medium": "image",
+    "isDraft": false,
+    "title": "Character consistency",
+    "rationale": "Serialised content needs the same face across a week of posts. This is where reference-conditioned models and edit models pull decisively ahead of pure text-to-image, and where a compile step can either help or destroy likeness.",
+    "prompt": "Using the supplied character sheet, produce three frames of the same person: (1) waiting at a bus stop in the rain, (2) laughing at a kitchen table, (3) walking away from camera down a corridor. Same person, same age, same hair, three genuinely different situations.",
+    "referenceRoles": [
+      "character-sheet"
+    ],
+    "outputSpec": {
+      "aspectRatio": "4:5",
+      "count": 3
+    },
+    "rubric": [
+      "Is it recognisably the same person in all three frames?",
+      "Did identity survive without freezing pose and expression?",
+      "Are the three situations actually different?",
+      "Craft of each frame independently"
+    ]
+  },
+  {
+    "id": "product-consistency",
+    "version": 1,
+    "medium": "image",
+    "isDraft": false,
+    "title": "Product consistency",
+    "rationale": "The commerce case. The product must survive relighting and relocation without the model redesigning it. Hallucinated logos, changed proportions, or invented buttons are disqualifying in a way that a slightly worse composition is not.",
+    "prompt": "Using the supplied product shot, place the exact same product in three scenes: on a bathroom shelf with morning light, in a gym bag on a bench, held in one hand outdoors against a blurred street. Do not alter the product's shape, label, colour or proportions.",
+    "referenceRoles": [
+      "product-shot"
+    ],
+    "outputSpec": {
+      "aspectRatio": "1:1",
+      "count": 3
+    },
+    "rubric": [
+      "Is the product unchanged in shape, label and colour?",
+      "Does the lighting on the product match the new scene?",
+      "Is the product's contact with the world physically plausible?",
+      "Would a brand ship this without a retoucher"
+    ]
+  },
+  {
+    "id": "prompt-adherence",
+    "version": 1,
+    "medium": "image",
+    "isDraft": false,
+    "title": "Prompt adherence",
+    "rationale": "Counting, spatial relations and negation are the three instructions image models most reliably ignore. This task is deliberately unglamorous: a beautiful image that gets the brief wrong loses to a plainer one that gets it right.",
+    "prompt": "Exactly five green apples and one lemon on a wooden table. The lemon is to the left of every apple. No leaves, no basket, no knife, no text. Overhead view, soft diffused light.",
+    "referenceRoles": [
+      "none"
+    ],
+    "outputSpec": {
+      "aspectRatio": "3:2",
+      "count": 1
+    },
+    "rubric": [
+      "Exactly five apples and exactly one lemon?",
+      "Is the lemon left of all five?",
+      "Are all four forbidden elements genuinely absent?",
+      "Craft, only after the four checks above"
+    ]
+  },
+  {
+    "id": "text-in-image",
+    "version": 1,
+    "medium": "image",
+    "isDraft": false,
+    "title": "Legible text",
+    "rationale": "The single most commercially decisive image capability and the one that moves most between releases. A model that cannot set six words correctly cannot make an ad, a thumbnail, or a menu.",
+    "prompt": "A hand-painted sandwich board outside a coffee shop. The board reads exactly:\nCLOSED MONDAYS\nOPEN 7-4 OTHERWISE\nChalk on black, slightly uneven letterforms, wet pavement, early morning.",
+    "referenceRoles": [
+      "none"
+    ],
+    "outputSpec": {
+      "aspectRatio": "4:5",
+      "count": 1
+    },
+    "rubric": [
+      "Is every character of the requested copy correct?",
+      "Is the line break where the prompt put it?",
+      "Does the lettering sit on the surface with correct perspective?",
+      "Craft of the surrounding image, once text is judged"
+    ]
+  },
+  {
+    "id": "unbranded-quality",
+    "version": 1,
+    "medium": "image",
+    "isDraft": false,
+    "title": "Unbranded craft",
+    "rationale": "Strips away every constraint except making a good picture. Separates models whose defaults are tasteful from models that need heavy prompting to stop looking synthetic. This is the task a raw model is most likely to win.",
+    "prompt": "An editorial photograph of a woman in her fifties closing up a neighbourhood bakery at dusk. Shot on 35mm, available light only, the shutters half-down behind her. She is tired and pleased. Natural skin texture, no retouching.",
+    "referenceRoles": [
+      "none"
+    ],
+    "outputSpec": {
+      "aspectRatio": "3:2",
+      "count": 1
+    },
+    "rubric": [
+      "Does it read as a photograph rather than a render?",
+      "Skin, fabric and metal texture under available light",
+      "Is the emotional read the one the prompt asked for?",
+      "Absence of synthetic tells: waxy highlights, symmetric faces, dead eyes"
+    ]
+  },
+  {
+    "id": "camera-instruction",
+    "version": 1,
+    "medium": "video",
+    "isDraft": true,
+    "title": "Camera instruction",
+    "rationale": "Whether the model can be directed. A generator that produces a lovely shot other than the one you asked for cannot be used in an edit.",
+    "prompt": "Start on a close-up of a kettle beginning to steam. Push in slowly for two seconds, then whip-pan left to a person looking up from a laptop. No cuts.",
+    "referenceRoles": [
+      "none"
+    ],
+    "outputSpec": {
+      "aspectRatio": "16:9",
+      "count": 1,
+      "durationSeconds": 6
+    },
+    "rubric": [
+      "Is the requested camera move the one performed?",
+      "Is it genuinely one continuous shot?",
+      "Does the timing match the instruction?",
+      "Craft of the resulting shot"
+    ]
+  },
+  {
+    "id": "first-frame-fidelity",
+    "version": 1,
+    "medium": "video",
+    "isDraft": true,
+    "title": "First-frame fidelity",
+    "rationale": "The production path that matters most: art-direct a still, then animate it. Measures how much of the approved frame survives contact with the video model.",
+    "prompt": "Animate the supplied style frame. The subject breathes and shifts weight; a curtain moves in the background. Nothing else changes. The first frame of the output must match the supplied frame.",
+    "referenceRoles": [
+      "style-frame"
+    ],
+    "outputSpec": {
+      "aspectRatio": "9:16",
+      "count": 1,
+      "durationSeconds": 5
+    },
+    "rubric": [
+      "Does frame one match the supplied frame?",
+      "Is the composition still the approved composition at the end?",
+      "Is the added motion the motion requested and no more?",
+      "Does colour and grade drift across the clip"
+    ]
+  },
+  {
+    "id": "motion-coherence",
+    "version": 1,
+    "medium": "video",
+    "isDraft": true,
+    "title": "Motion coherence",
+    "rationale": "Whether a subject survives its own movement. Limb count, ground contact and object permanence are where video models still fail in ways a still image never reveals.",
+    "prompt": "A courier carries a stack of four flat boxes across a busy pavement, turns side-on to pass a lamp post, and continues. Single continuous shot, handheld, daylight.",
+    "referenceRoles": [
+      "none"
+    ],
+    "outputSpec": {
+      "aspectRatio": "16:9",
+      "count": 1,
+      "durationSeconds": 5
+    },
+    "rubric": [
+      "Do the boxes stay the same four boxes?",
+      "Limbs and hands through the turn",
+      "Feet contact the ground without sliding",
+      "Does the background persist as the camera moves"
+    ]
+  }
+]

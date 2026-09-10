@@ -1,0 +1,28 @@
+name: ci
+
+on:
+  push:
+    branches: [master]
+  pull_request:
+
+jobs:
+  validate:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v5
+      - uses: oven-sh/setup-bun@v2
+        with:
+          bun-version: latest
+      - run: bun install --frozen-lockfile
+      - run: bun run validate
+      # The ladder and the task index are both derived. If recomputing either
+      # changes the committed tree, someone hand-edited published data.
+      - run: bun run ladder
+      - run: bun run build:index
+      - name: derived data is reproducible
+        run: |
+          if ! git diff --quiet -- data/seasons data/tasks.json; then
+            echo "::error::committed data does not match a fresh recompute"
+            git --no-pager diff -- data/seasons data/tasks.json
+            exit 1
+          fi

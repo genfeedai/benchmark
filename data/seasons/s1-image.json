@@ -1,0 +1,28 @@
+{
+  "id": "s1-image",
+  "title": "Season One — Image",
+  "medium": "image",
+  "state": "announced",
+  "announcedAt": "2026-09-10T00:00:00.000Z",
+  "openedAt": null,
+  "closedAt": null,
+  "taskIds": [
+    "unbranded-quality",
+    "text-in-image",
+    "brand-kit-fidelity",
+    "character-consistency",
+    "product-consistency",
+    "prompt-adherence"
+  ],
+  "contestantIds": [
+    "genfeed-compiled.seedream-5-pro",
+    "bytedance.seedream-5-pro",
+    "google.nano-banana-2",
+    "black-forest-labs.flux-2-pro",
+    "openai.gpt-image-2",
+    "recraft-ai.recraft-v4-pro"
+  ],
+  "matchCount": 0,
+  "ladder": [],
+  "updatedAt": "2026-09-10T00:00:00.000Z"
+}
