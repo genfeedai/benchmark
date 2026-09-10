@@ -141,7 +141,11 @@ for (const path of await collect('data/seasons/*.json')) {
   }
 
   if (season.matchCount !== recorded) {
-    fail(path, `matchCount ${season.matchCount} but ${recorded} recorded`);
+    fail(
+      path,
+      `matchCount ${season.matchCount} but ${recorded} recorded in the journal` +
+        ' — run `bun run ladder` to rederive the season',
+    );
   }
   if (recorded === 0 && season.ladder.length > 0) {
     fail(path, 'ladder has entries but no match has been recorded');
