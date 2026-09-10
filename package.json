@@ -6,8 +6,9 @@
   "type": "module",
   "license": "AGPL-3.0-only",
   "scripts": {
-    "validate": "bun run scripts/validate.ts",
-    "ladder": "bun run scripts/ladder.ts"
+    "build:index": "bun run scripts/build-index.ts",
+    "ladder": "bun run scripts/ladder.ts",
+    "validate": "bun run scripts/validate.ts"
   },
   "dependencies": {
     "zod": "4.5.4"

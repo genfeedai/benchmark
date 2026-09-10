@@ -15,13 +15,14 @@ jobs:
           bun-version: latest
       - run: bun install --frozen-lockfile
       - run: bun run validate
-      # The ladder is derived. If recomputing it changes the committed season,
-      # someone hand-edited standings and the tree is lying.
+      # The ladder and the task index are both derived. If recomputing either
+      # changes the committed tree, someone hand-edited published data.
       - run: bun run ladder
-      - name: ladder is reproducible
+      - run: bun run build:index
+      - name: derived data is reproducible
         run: |
-          if ! git diff --quiet -- data/seasons; then
-            echo "::error::committed ladder does not match the journal"
-            git --no-pager diff -- data/seasons
+          if ! git diff --quiet -- data/seasons data/tasks.json; then
+            echo "::error::committed data does not match a fresh recompute"
+            git --no-pager diff -- data/seasons data/tasks.json
             exit 1
           fi

@@ -33,6 +33,7 @@ tasks/image/      Season One task pack (6 tasks, versioned)
 tasks/video/      Season Two drafts — readable, not runnable
 data/
   contestants.json      append-only registry (compiled + raw routes)
+  tasks.json            derived flat index of every task, for the site
   seasons/*.json        season state and the derived ladder
   matches/*.jsonl       append-only match journal
 fixtures/brand-kit/     public synthetic brand kit, so brand tasks are re-runnable
@@ -44,8 +45,9 @@ scripts/ladder.ts       recomputes a ladder from its journal
 
 ```bash
 bun install
-bun run validate    # schema, referential integrity, no-secrets gate
-bun run ladder      # recompute every season ladder from its journal
+bun run validate     # schema, referential integrity, no-secrets gate
+bun run ladder       # recompute every season ladder from its journal
+bun run build:index  # rebuild data/tasks.json from tasks/
 ```
 
 `bun run ladder` is deterministic. Clone this repo, run it, and you must get byte-identical
