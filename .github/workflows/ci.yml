@@ -1,0 +1,27 @@
+name: ci
+
+on:
+  push:
+    branches: [master]
+  pull_request:
+
+jobs:
+  validate:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v5
+      - uses: oven-sh/setup-bun@v2
+        with:
+          bun-version: latest
+      - run: bun install --frozen-lockfile
+      - run: bun run validate
+      # The ladder is derived. If recomputing it changes the committed season,
+      # someone hand-edited standings and the tree is lying.
+      - run: bun run ladder
+      - name: ladder is reproducible
+        run: |
+          if ! git diff --quiet -- data/seasons; then
+            echo "::error::committed ladder does not match the journal"
+            git --no-pager diff -- data/seasons
+            exit 1
+          fi

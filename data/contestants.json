@@ -1,0 +1,62 @@
+[
+  {
+    "id": "genfeed-compiled.seedream-5-pro",
+    "label": "Genfeed compile → Seedream 5 Pro",
+    "provider": "genfeed",
+    "modelId": "bytedance/seedream-5-pro",
+    "isCompiled": true,
+    "mediums": ["image"],
+    "addedAt": "2026-09-10T00:00:00.000Z",
+    "retiredAt": null
+  },
+  {
+    "id": "bytedance.seedream-5-pro",
+    "label": "Seedream 5 Pro",
+    "provider": "bytedance",
+    "modelId": "bytedance/seedream-5-pro",
+    "isCompiled": false,
+    "mediums": ["image"],
+    "addedAt": "2026-09-10T00:00:00.000Z",
+    "retiredAt": null
+  },
+  {
+    "id": "google.nano-banana-2",
+    "label": "Nano Banana 2",
+    "provider": "google",
+    "modelId": "google/nano-banana-2",
+    "isCompiled": false,
+    "mediums": ["image"],
+    "addedAt": "2026-09-10T00:00:00.000Z",
+    "retiredAt": null
+  },
+  {
+    "id": "black-forest-labs.flux-2-pro",
+    "label": "FLUX.2 Pro",
+    "provider": "black-forest-labs",
+    "modelId": "black-forest-labs/flux-2-pro",
+    "isCompiled": false,
+    "mediums": ["image"],
+    "addedAt": "2026-09-10T00:00:00.000Z",
+    "retiredAt": null
+  },
+  {
+    "id": "openai.gpt-image-2",
+    "label": "GPT Image 2",
+    "provider": "openai",
+    "modelId": "openai/gpt-image-2",
+    "isCompiled": false,
+    "mediums": ["image"],
+    "addedAt": "2026-09-10T00:00:00.000Z",
+    "retiredAt": null
+  },
+  {
+    "id": "recraft-ai.recraft-v4-pro",
+    "label": "Recraft V4 Pro",
+    "provider": "recraft-ai",
+    "modelId": "recraft-ai/recraft-v4-pro",
+    "isCompiled": false,
+    "mediums": ["image"],
+    "addedAt": "2026-09-10T00:00:00.000Z",
+    "retiredAt": null
+  }
+]
