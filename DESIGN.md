@@ -1,5 +1,11 @@
 # Design and methodology
 
+> **This document specifies the bench; it does not describe running code.** The match loop,
+> judge panel and provider adapters described below are **not built yet** — see Status in
+> the [README](README.md). Present tense here means "is specified as", not "does today".
+> Tracking issue:
+> [genfeedai/genfeed.ai#3848](https://github.com/genfeedai/genfeed.ai/issues/3848).
+
 ## The shape
 
 A **season** fixes a medium, a task pack and a contestant registry. A **match** draws one
