@@ -24,6 +24,8 @@ export const REFERENCE_ROLE = [
   'character-sheet',
   'product-shot',
   'style-frame',
+  /** A spoken source, such as a voice-note transcript, to script from. */
+  'transcript',
 ] as const;
 
 export const taskSchema = z.object({

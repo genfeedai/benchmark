@@ -1,0 +1,26 @@
+{
+  "id": "long-form-presenter",
+  "version": 1,
+  "medium": "video",
+  "isDraft": true,
+  "title": "Voice note to long-form presenter video",
+  "rationale": "The whole production path in one task: a rambling voice note becomes a scripted talk, a presenter who stays the same person and in lip sync for minutes, B-roll that matches what is being said, and an edit with no visible seams. Short clips hide drift; four minutes does not. Contestants are routes rather than single models, so a compiled route and the raw avatar model it calls can meet head to head.",
+  "prompt": "Turn the supplied voice note (fixtures/long-form/voice-note.json) into a finished talking-head video of at most eight minutes, presented by the person in the supplied character sheet. Clean the voice note into a script that keeps the speaker's points and order, add B-roll over the presenter where it illustrates what is said, and burn in captions. One continuous presenter; no music.",
+  "referenceRoles": [
+    "transcript",
+    "character-sheet"
+  ],
+  "outputSpec": {
+    "aspectRatio": "16:9",
+    "count": 1,
+    "durationSeconds": 480
+  },
+  "rubric": [
+    "Does the script keep every point of the voice note, in order, and nothing it did not say?",
+    "Does the presenter stay the same person, with lips in sync, from first second to last?",
+    "Are the joins between presenter renders invisible?",
+    "Does each B-roll shot show what is being said at that moment?",
+    "Do the captions match the speech word for word?",
+    "Does it hold attention: pacing, cuts and length"
+  ]
+}
