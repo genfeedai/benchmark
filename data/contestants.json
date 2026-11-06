@@ -37,7 +37,7 @@
     "isCompiled": false,
     "mediums": ["image"],
     "addedAt": "2026-09-10T00:00:00.000Z",
-    "retiredAt": null
+    "retiredAt": "2026-11-06T00:00:00.000Z"
   },
   {
     "id": "openai.gpt-image-2",
@@ -57,6 +57,26 @@
     "isCompiled": false,
     "mediums": ["image"],
     "addedAt": "2026-09-10T00:00:00.000Z",
+    "retiredAt": "2026-11-06T00:00:00.000Z"
+  },
+  {
+    "id": "black-forest-labs.flux-3-image",
+    "label": "FLUX.3",
+    "provider": "black-forest-labs",
+    "modelId": "black-forest-labs/flux-3-image",
+    "isCompiled": false,
+    "mediums": ["image"],
+    "addedAt": "2026-11-06T00:00:00.000Z",
+    "retiredAt": null
+  },
+  {
+    "id": "ideogram-ai.ideogram-v3-quality",
+    "label": "Ideogram V3 Quality",
+    "provider": "ideogram-ai",
+    "modelId": "ideogram-ai/ideogram-v3-quality",
+    "isCompiled": false,
+    "mediums": ["image"],
+    "addedAt": "2026-11-06T00:00:00.000Z",
     "retiredAt": null
   }
 ]
