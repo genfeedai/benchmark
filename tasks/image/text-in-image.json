@@ -1,13 +1,48 @@
 {
   "id": "text-in-image",
-  "version": 1,
+  "version": 2,
   "medium": "image",
   "isDraft": false,
   "title": "Legible text",
   "rationale": "The single most commercially decisive image capability and the one that moves most between releases. A model that cannot set six words correctly cannot make an ad, a thumbnail, or a menu.",
   "prompt": "A hand-painted sandwich board outside a coffee shop. The board reads exactly:\nCLOSED MONDAYS\nOPEN 7-4 OTHERWISE\nChalk on black, slightly uneven letterforms, wet pavement, early morning.",
-  "referenceRoles": ["none"],
-  "outputSpec": { "aspectRatio": "4:5", "count": 1 },
+  "variants": [
+    {
+      "id": "tii-neon-bar",
+      "prompt": "A pink neon sign on a dark brick wall inside a bar. The sign reads exactly:\nLAST ORDERS\n11:45 PM\nGlass tubes and their mounts visible, a soft glow on the bricks, no other text in frame."
+    },
+    {
+      "id": "tii-receipt",
+      "prompt": "A close-up of a crumpled paper receipt on a café table. The printed lines read exactly:\nFLAT WHITE 3.40\nCROISSANT 2.85\nTOTAL 6.25\nThermal print in a monospaced face, a coffee ring on the paper."
+    },
+    {
+      "id": "tii-accents",
+      "prompt": "A screen-printed concert poster pasted on a wall. Top line in large letters, exactly: CAFÉ SOCIÉTÉ. Below it, smaller, exactly: Jeudi 14 mars · 20h30. Two inks, orange and navy, slightly misregistered, one corner torn."
+    },
+    {
+      "id": "tii-label",
+      "prompt": "A product shot of a matte white tub of hand cream on a beige surface. The label reads exactly:\nOAT & SHEA\nHAND CREAM\n75 ml\nCentred sans-serif label, soft studio light."
+    },
+    {
+      "id": "tii-handwriting",
+      "prompt": "A yellow sticky note on a laptop screen. Handwritten in black marker it says exactly:\ncall Jo back\nbefore 3pm!!\nShallow depth of field, the screen behind it blurred."
+    },
+    {
+      "id": "tii-street-sign",
+      "prompt": "A blue enamel street sign on a pale stone wall, photographed from slightly below. It reads exactly: Rue des Quatre-Vents. A smaller line under it reads exactly: 6e Arr. Every accent and hyphen correct, no other text in frame."
+    },
+    {
+      "id": "tii-menu-board",
+      "prompt": "A café chalkboard menu on a wall, photographed straight on. It reads exactly, one item per line:\nSOUP OF THE DAY 6\nGRILLED CHEESE 8\nKALE SALAD 9\nBROWNIE 4\nNo extra items, prices aligned on the right."
+    }
+  ],
+  "referenceRoles": [
+    "none"
+  ],
+  "outputSpec": {
+    "aspectRatio": "4:5",
+    "count": 1
+  },
   "rubric": [
     "Is every character of the requested copy correct?",
     "Is the line break where the prompt put it?",

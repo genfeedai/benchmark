@@ -1,0 +1,41 @@
+{
+  "id": "product-in-motion",
+  "version": 1,
+  "medium": "video",
+  "isDraft": true,
+  "title": "Product in motion",
+  "rationale": "The commerce case for video: start from an approved product shot and move it, without the label, shape or colour drifting. A product that changes between frames cannot run as an ad.",
+  "prompt": "Using the supplied product shot as the first frame, a hand enters, picks the product up, turns it to show the side, and sets it down. The product's shape, label and colour must not change at any point.",
+  "variants": [
+    {
+      "id": "pim-orbit",
+      "prompt": "Using the supplied product shot as the first frame, the camera orbits a quarter turn around the product. The product stays identical; only the viewing angle changes."
+    },
+    {
+      "id": "pim-splash",
+      "prompt": "Using the supplied product shot as the first frame, water splashes over the product and runs off it. The label stays legible and unchanged."
+    },
+    {
+      "id": "pim-unbox",
+      "prompt": "Using the supplied product shot as the first frame, two hands lift the product out of a plain cardboard box and set it on the box lid. The product does not change."
+    },
+    {
+      "id": "pim-shelf",
+      "prompt": "Using the supplied product shot as the first frame, the camera pulls back from the product to reveal it on a shop shelf among other items. The product does not change."
+    }
+  ],
+  "referenceRoles": [
+    "product-shot"
+  ],
+  "outputSpec": {
+    "aspectRatio": "9:16",
+    "count": 1,
+    "durationSeconds": 5
+  },
+  "rubric": [
+    "Is the product unchanged in shape, label and colour in every frame?",
+    "Does frame one match the supplied product shot?",
+    "Is the motion physically plausible, hands included?",
+    "Could a brand run this as an ad without fixes?"
+  ]
+}

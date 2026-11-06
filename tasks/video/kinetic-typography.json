@@ -1,0 +1,38 @@
+{
+  "id": "kinetic-typography",
+  "version": 1,
+  "medium": "video",
+  "isDraft": true,
+  "title": "Kinetic typography",
+  "rationale": "Text-led motion is the most posted video format for brands and the one generative video handles worst. Contestants are routes, not single models, so a video model and a code-rendered composition (for example Remotion or HyperFrames, see genfeedai/genfeed.ai#9570) meet on the same brief and are judged blind on the same output.",
+  "prompt": "A 10-second vertical kinetic-typography clip for the brand in the supplied kit. On screen, in order, one line at a time, exactly:\nMOST STUDIOS QUIT\nIN 90 DAYS\nNOT BECAUSE THEY'RE LAZY\nBECAUSE THEY WAIT\nTO BE FINISHED\nEnd on the kit wordmark. Kit palette and rules throughout; lines never overlap; each line holds long enough to read.",
+  "variants": [
+    {
+      "id": "kt-stat",
+      "prompt": "A 10-second vertical kinetic-typography clip for the brand in the supplied kit. On screen, in order, exactly:\n3 OUT OF 4\nBUYERS\nCHECK REVIEWS FIRST\nThe 3 counts up from 0. End on the kit wordmark. Kit palette and rules throughout; each line holds long enough to read."
+    },
+    {
+      "id": "kt-launch",
+      "prompt": "A 10-second vertical kinetic-typography clip for the brand in the supplied kit. On screen, in order, exactly:\nNEW GLAZE\nRUST\nIN STORE FRIDAY\nEach line slides in from the left. End on the kit wordmark. Kit palette and rules throughout; each line holds long enough to read."
+    },
+    {
+      "id": "kt-list",
+      "prompt": "A 10-second vertical kinetic-typography clip for the brand in the supplied kit. On screen, in order, exactly:\n3 THINGS\n1. FILM THE PROCESS\n2. POST AT ONE TIME\n3. DON'T WAIT\nEach item appears on its own beat. End on the kit wordmark. Kit palette and rules throughout; each line holds long enough to read."
+    }
+  ],
+  "referenceRoles": [
+    "brand-kit"
+  ],
+  "outputSpec": {
+    "aspectRatio": "9:16",
+    "count": 1,
+    "durationSeconds": 10
+  },
+  "rubric": [
+    "Is every word correct and in the requested order?",
+    "Does each line stay on screen long enough to read on a phone?",
+    "Are the kit palette, wordmark and rules followed?",
+    "Is the motion smooth and purposeful, with no overlaps or jitter?",
+    "Does it end cleanly on the wordmark?"
+  ]
+}

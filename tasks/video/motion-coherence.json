@@ -1,13 +1,45 @@
 {
   "id": "motion-coherence",
-  "version": 1,
+  "version": 2,
   "medium": "video",
   "isDraft": true,
   "title": "Motion coherence",
   "rationale": "Whether a subject survives its own movement. Limb count, ground contact and object permanence are where video models still fail in ways a still image never reveals.",
   "prompt": "A courier carries a stack of four flat boxes across a busy pavement, turns side-on to pass a lamp post, and continues. Single continuous shot, handheld, daylight.",
-  "referenceRoles": ["none"],
-  "outputSpec": { "aspectRatio": "16:9", "count": 1, "durationSeconds": 5 },
+  "variants": [
+    {
+      "id": "mc-juggler",
+      "prompt": "A street performer juggles three red balls for several throws, then catches all three. Single continuous locked-off shot, daylight."
+    },
+    {
+      "id": "mc-frisbee",
+      "prompt": "A dog runs across a park, leaps and catches a frisbee in mid-air, lands and runs back toward the camera. Single continuous tracking shot, afternoon light."
+    },
+    {
+      "id": "mc-pour",
+      "prompt": "A waiter pours red wine into two glasses on a table, one after the other, without spilling. Continuous close shot, warm restaurant light."
+    },
+    {
+      "id": "mc-dance",
+      "prompt": "Two people dance a simple swing turn in a kitchen, holding hands throughout. Continuous wide shot."
+    },
+    {
+      "id": "mc-staircase",
+      "prompt": "A child runs down a spiral staircase holding a balloon on a string. The camera follows from above. Continuous shot."
+    },
+    {
+      "id": "mc-shoelace",
+      "prompt": "Close-up of two hands tying a shoelace into a bow and pulling it tight. Continuous shot, natural light."
+    }
+  ],
+  "referenceRoles": [
+    "none"
+  ],
+  "outputSpec": {
+    "aspectRatio": "16:9",
+    "count": 1,
+    "durationSeconds": 5
+  },
   "rubric": [
     "Do the boxes stay the same four boxes?",
     "Limbs and hands through the turn",

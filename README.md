@@ -43,7 +43,7 @@ adherence — not because they make pretty demos.
 
 ```
 schema/           zod contracts for tasks, contestants, seasons, matches
-tasks/image/      Season One task pack (6 tasks, versioned)
+tasks/image/      Season One task pack (7 tasks in the season, plus drafts; versioned)
 tasks/video/      Season Two drafts — readable, not runnable
 data/
   contestants.json      append-only registry (compiled + raw routes)
@@ -51,12 +51,28 @@ data/
   seasons/*.json        season state and the derived ladder
   matches/*.jsonl       append-only match journal
 fixtures/brand-kit/     public synthetic brand kit, so brand tasks are re-runnable
+fixtures/references/    briefs for the public reference images (not produced yet)
 scripts/validate.ts     the CI gate
 scripts/ladder.ts       recomputes a ladder from its journal
 scripts/build-index.ts  rebuilds data/tasks.json from tasks/
 
 (no harness/ or adapters/ yet — see Status above)
 ```
+
+## Prompt sets
+
+Each task has a headline `prompt`, shown on its public page, and a set of further public
+`variants`. A match draws one of them and records which in `variantId`, so a model cannot
+win a task by being good at one sentence. Variants share the task's references, output
+spec and rubric. Changing a task's prompt set bumps its `version`.
+
+## Reference fixtures
+
+Tasks that hand a contestant a character sheet, product shot or style frame need one
+public image every contestant receives. Only the brand kit exists today. The other three
+are briefed in `fixtures/references/briefs.json` and are **not produced yet**, so
+`character-consistency` and `product-consistency` cannot be re-run by a stranger until
+those files are committed.
 
 ## Commands
 

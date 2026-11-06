@@ -1,0 +1,62 @@
+{
+  "id": "youtube-thumbnail",
+  "version": 1,
+  "medium": "image",
+  "isDraft": false,
+  "title": "YouTube thumbnail",
+  "rationale": "The image that decides whether a video gets watched, and a format with hard rules a pretty picture can still fail: three or four words that must be spelled right and read at phone-feed size, one focal point, a promise that matches the title, and a bottom-right corner the duration badge will cover. Judges look at the thumbnail at feed size before full size, because that is where it is actually seen.",
+  "prompt": "A YouTube thumbnail for a video titled \"I Tried Every Budget Espresso Machine\". Thumbnail text, exactly: UNDER $100?. One clear focal point: a cheap espresso machine mid-pour, crema visible. Bold, high-contrast colours; the text large enough to read at phone-feed size. Keep the bottom-right corner free of text and key detail.",
+  "variants": [
+    {
+      "id": "ytt-finance",
+      "prompt": "A YouTube thumbnail for a video titled \"How I Paid Off $40,000 in Two Years\". Thumbnail text, exactly: DEBT FREE. A person holding up a credit card cut in half, relieved, against a plain saturated background. Text readable at phone-feed size; bottom-right corner clear."
+    },
+    {
+      "id": "ytt-phone-test",
+      "prompt": "A YouTube thumbnail for a video titled \"Budget Phone vs Flagship: Blind Camera Test\". Thumbnail text, exactly: CAN YOU TELL?. Two unbranded phones side by side on a split two-colour background, each screen showing the same photo of a sunset. No logos. Text readable at phone-feed size; bottom-right corner clear."
+    },
+    {
+      "id": "ytt-sourdough",
+      "prompt": "A YouTube thumbnail for a video titled \"The Only Sourdough Guide You Need\". Thumbnail text, exactly: NO KNEAD. A sourdough loaf cut in half showing an open, airy crumb, flour dusted on a dark surface. Text readable at phone-feed size; bottom-right corner clear."
+    },
+    {
+      "id": "ytt-push-ups",
+      "prompt": "A YouTube thumbnail for a video titled \"I Did 100 Push-Ups a Day for 30 Days\". Thumbnail text, exactly: DAY 30. A person mid push-up, shot low and close, hard light, sweat visible. Text readable at phone-feed size; bottom-right corner clear."
+    },
+    {
+      "id": "ytt-travel",
+      "prompt": "A YouTube thumbnail for a video titled \"Japan on $50 a Day\". Thumbnail text, exactly: $50/DAY. A narrow lantern-lit street at dusk, a backpacker seen from behind looking down it. Text readable at phone-feed size; bottom-right corner clear."
+    },
+    {
+      "id": "ytt-gaming",
+      "prompt": "A YouTube thumbnail for a video titled \"Beating the Hardest Boss With No Armour\". Thumbnail text, exactly: NO ARMOUR. A knight in a plain linen shirt holding a sword, facing a huge dragon in a cavern, dramatic rim light. Original characters only. Text readable at phone-feed size; bottom-right corner clear."
+    },
+    {
+      "id": "ytt-explainer",
+      "prompt": "A YouTube thumbnail for a video titled \"Why Planes Avoid the Middle of the Pacific\". Thumbnail text, exactly: WHY?. A globe showing the Pacific with a curved red flight path bending north around it. Text readable at phone-feed size; bottom-right corner clear."
+    },
+    {
+      "id": "ytt-diy",
+      "prompt": "A YouTube thumbnail for a video titled \"I Built a Desk for $60\". Thumbnail text, exactly: $60 DESK. A finished plywood desk in a small bright room, a circular saw on the floor in the foreground. Text readable at phone-feed size; bottom-right corner clear."
+    },
+    {
+      "id": "ytt-no-text",
+      "prompt": "A YouTube thumbnail for a video titled \"Snowed-In Cabin, Silent Morning (4K ambience)\". No text at all. A small wooden cabin under deep snow at dawn, smoke from the chimney, one warm window. Calm, but readable as one image at phone-feed size; bottom-right corner clear."
+    }
+  ],
+  "referenceRoles": [
+    "none"
+  ],
+  "outputSpec": {
+    "aspectRatio": "16:9",
+    "count": 1
+  },
+  "rubric": [
+    "View it at 168 × 94 px first, the size of a phone feed: can you read the text and tell what the video is about in about a second?",
+    "Is every character of the thumbnail text correct, and is there no other text?",
+    "Does the image promise what the title delivers, without misleading?",
+    "One clear focal point, with strong contrast between subject and background",
+    "Is the bottom-right corner clear, where the duration badge covers it?",
+    "Craft at full size, once the checks above are judged"
+  ]
+}

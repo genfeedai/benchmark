@@ -1,13 +1,48 @@
 {
   "id": "unbranded-quality",
-  "version": 1,
+  "version": 2,
   "medium": "image",
   "isDraft": false,
   "title": "Unbranded craft",
   "rationale": "Strips away every constraint except making a good picture. Separates models whose defaults are tasteful from models that need heavy prompting to stop looking synthetic. This is the task a raw model is most likely to win.",
   "prompt": "An editorial photograph of a woman in her fifties closing up a neighbourhood bakery at dusk. Shot on 35mm, available light only, the shutters half-down behind her. She is tired and pleased. Natural skin texture, no retouching.",
-  "referenceRoles": ["none"],
-  "outputSpec": { "aspectRatio": "3:2", "count": 1 },
+  "variants": [
+    {
+      "id": "uq-harbour-net",
+      "prompt": "A documentary photograph of an old fisherman mending a net on a harbour wall at first light. Medium format, overcast sky, cold palette. His hands are the sharpest thing in the frame. Natural skin texture, no retouching."
+    },
+    {
+      "id": "uq-kitchen-steam",
+      "prompt": "A still life of a cast-iron pan of fried eggs on a gas hob, steam rising through a shaft of window light, a wooden spoon resting on the rim. 50mm, shallow depth of field, slightly underexposed, real grease on the tiles behind."
+    },
+    {
+      "id": "uq-kerb-laugh",
+      "prompt": "A teenage boy sitting on a kerb with a skateboard across his knees, laughing at something out of frame. Late afternoon backlight, a little lens flare, 35mm film grain. Candid, not posed."
+    },
+    {
+      "id": "uq-mountain-hut",
+      "prompt": "A wide landscape photograph of a stone mountain hut below a ridge in fog, one lit window, a figure with a head torch walking toward it. Blue hour, long-lens compression, nothing that looks like a replaced sky."
+    },
+    {
+      "id": "uq-night-market",
+      "prompt": "A night market in the rain, shot from inside a stall looking out: bare bulbs on a wire, wet tarpaulin, blurred passers-by under umbrellas, steam from a wok in the foreground. Available light only, high-ISO grain."
+    },
+    {
+      "id": "uq-old-dog",
+      "prompt": "A portrait of an old grey-muzzled Labrador lying on a worn wooden floor, head on paws, looking at the camera. Window light from the left, dust in the air, 85mm."
+    },
+    {
+      "id": "uq-empty-office",
+      "prompt": "An empty open-plan office at 7pm: chairs pushed in at odd angles, one monitor still on, city lights through floor-to-ceiling windows, a cleaner's trolley by the lift. Architectural photograph, verticals kept straight."
+    }
+  ],
+  "referenceRoles": [
+    "none"
+  ],
+  "outputSpec": {
+    "aspectRatio": "3:2",
+    "count": 1
+  },
   "rubric": [
     "Does it read as a photograph rather than a render?",
     "Skin, fabric and metal texture under available light",

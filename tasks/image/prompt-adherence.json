@@ -1,13 +1,48 @@
 {
   "id": "prompt-adherence",
-  "version": 1,
+  "version": 2,
   "medium": "image",
   "isDraft": false,
   "title": "Prompt adherence",
   "rationale": "Counting, spatial relations and negation are the three instructions image models most reliably ignore. This task is deliberately unglamorous: a beautiful image that gets the brief wrong loses to a plainer one that gets it right.",
   "prompt": "Exactly five green apples and one lemon on a wooden table. The lemon is to the left of every apple. No leaves, no basket, no knife, no text. Overhead view, soft diffused light.",
-  "referenceRoles": ["none"],
-  "outputSpec": { "aspectRatio": "3:2", "count": 1 },
+  "variants": [
+    {
+      "id": "pa-mug-row",
+      "prompt": "Four coffee mugs in a row on a white shelf, from left to right: red, blue, yellow, green. The blue mug is upside down. The green mug's handle faces away from the camera so it is not visible. No people, no text, no other objects. Straight-on view."
+    },
+    {
+      "id": "pa-chairs",
+      "prompt": "Three wooden chairs and one red stool in an empty room with bare walls. The stool stands between the second and third chair. One chair, and only one, is knocked over. No windows, no rug, no plants."
+    },
+    {
+      "id": "pa-birds",
+      "prompt": "Exactly seven birds sitting on a single telephone wire against a plain grey sky, and one more bird flying away to the right. No buildings, no trees, no second wire."
+    },
+    {
+      "id": "pa-clock",
+      "prompt": "An analogue wall clock on a plain white wall showing exactly ten past four. Roman numerals, no second hand, no logo or text anywhere on the dial."
+    },
+    {
+      "id": "pa-cards",
+      "prompt": "A person's left hand holding three fanned playing cards: the ace of spades, the seven of hearts and the two of clubs, in that order from left to right. Their right hand is not in frame. No rings, no watch."
+    },
+    {
+      "id": "pa-glass",
+      "prompt": "A glass of water on a table with a pencil standing in it, the pencil looking bent at the waterline. Behind the glass, out of focus, exactly two lit candles. No flowers, no plates, no cutlery."
+    },
+    {
+      "id": "pa-book-stack",
+      "prompt": "A stack of exactly six books on a desk. The second book from the top is upside down. A blue pen lies on top of the stack; a green pen is under the bottom book with only its tip showing. No lamp, no laptop, no mug."
+    }
+  ],
+  "referenceRoles": [
+    "none"
+  ],
+  "outputSpec": {
+    "aspectRatio": "3:2",
+    "count": 1
+  },
   "rubric": [
     "Exactly five apples and exactly one lemon?",
     "Is the lemon left of all five?",

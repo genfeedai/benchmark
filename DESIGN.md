@@ -39,6 +39,15 @@ Each task exists because it separates models in work people actually get paid fo
 | Character consistency | serialised content across a week of posts |
 | Product consistency | commerce; hallucinated labels are disqualifying |
 | Prompt adherence | counting, spatial relations, negation — the three reliable failures |
+| YouTube thumbnail | text that reads at feed size, one focal point, a promise that matches the title |
+
+The video drafts add camera direction, first-frame fidelity, motion coherence, spoken lines
+with native audio, legible text in motion, a product in motion, the first-second hook,
+kinetic typography (a route task, so code-rendered motion can meet a video model) and the
+long-form presenter route.
+
+Every task carries a public prompt set: a headline prompt plus variants. One variant is
+drawn per match and recorded, so a ranking reflects the task rather than one sentence.
 
 A beautiful image that gets the brief wrong loses to a plainer one that gets it right.
 Several rubrics say so explicitly, in order, so a judge cannot quietly trade adherence for

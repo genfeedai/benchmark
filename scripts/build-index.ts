@@ -5,8 +5,8 @@ import { type Task, taskSchema } from '../schema';
 /**
  * Flattens `tasks/**` into one `data/tasks.json`.
  *
- * genfeed.ai/benchmark renders the suite, and nine HTTP round trips to fetch
- * nine task files would be nine chances for the page to half-load. The index
+ * genfeed.ai/benchmark renders the suite, and one HTTP round trip per task
+ * file would be one more chance per task for the page to half-load. The index
  * is derived, never hand-edited: CI rebuilds it and fails on any diff.
  */
 

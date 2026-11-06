@@ -1,13 +1,48 @@
 {
   "id": "brand-kit-fidelity",
-  "version": 1,
+  "version": 2,
   "medium": "image",
   "isDraft": false,
   "title": "Brand kit fidelity",
   "rationale": "Real content work is constrained work. A model that ignores a supplied palette and typeface is unusable for a brand however pretty its output. Uses a public synthetic brand kit so anyone can re-run this without our customers' assets.",
   "prompt": "A launch announcement image for the brand in the supplied kit. Follow the kit palette exactly, use the kit wordmark once at the size the kit specifies, and leave the lower third clear for caption text. Subject: a single ceramic mug on a concrete surface, hard side light.",
-  "referenceRoles": ["brand-kit"],
-  "outputSpec": { "aspectRatio": "1:1", "count": 1 },
+  "variants": [
+    {
+      "id": "bkf-sale",
+      "prompt": "A sale post for the brand in the supplied kit. Headline, exactly: WINTER SALE -20%. Follow the kit palette exactly, use the kit wordmark once at the size the kit specifies, and keep the lower third clear. Subject: three stacked ceramic bowls, hard side light."
+    },
+    {
+      "id": "bkf-quote-card",
+      "prompt": "A quote card for the brand in the supplied kit. The quote, exactly: \"Made slowly, used daily.\" Typography only, set in the kit typeface on the kit paper colour, wordmark once as specified, accent on one element only. No photograph."
+    },
+    {
+      "id": "bkf-workshop",
+      "prompt": "An invitation for the brand in the supplied kit. Text, exactly, on three lines: OPEN STUDIO / SAT 12 APRIL / 10-4. Follow the palette and every kit rule. Subject: hands shaping clay on a wheel, cropped tight."
+    },
+    {
+      "id": "bkf-lifestyle",
+      "prompt": "A lifestyle image for the brand in the supplied kit: a ceramic teapot on a breakfast table by a window. The props and grade sit inside the kit palette, the wordmark appears once as specified, no gradients or shadows are added as graphics, and the lower third stays clear."
+    },
+    {
+      "id": "bkf-flat-lay",
+      "prompt": "A flat lay for the brand in the supplied kit: four ceramic pieces on the kit paper colour, shot top-down in hard light. Wordmark once as the kit specifies; exactly one piece in the accent colour."
+    },
+    {
+      "id": "bkf-hiring",
+      "prompt": "A hiring post for the brand in the supplied kit. Text, exactly, on two lines: WE'RE HIRING / STUDIO ASSISTANT. Typographic layout only, kit palette, wordmark once, lower third clear."
+    },
+    {
+      "id": "bkf-new-glaze",
+      "prompt": "A product announcement for the brand in the supplied kit. Text, exactly: NEW GLAZE: RUST. Subject: a single vase whose glaze is the kit accent colour; everything else stays in the kit's ink, paper and muted colours."
+    }
+  ],
+  "referenceRoles": [
+    "brand-kit"
+  ],
+  "outputSpec": {
+    "aspectRatio": "1:1",
+    "count": 1
+  },
   "rubric": [
     "Are the kit's hex values actually the ones on screen?",
     "Is the wordmark reproduced without distortion or invention?",
