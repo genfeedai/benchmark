@@ -1,0 +1,45 @@
+{
+  "note": "Briefs for the public reference images that tasks hand to contestants. None of these images exists yet, so tasks that need them cannot run reproducibly. Each image is to be made once, reviewed by a maintainer, committed under fixtures/references/, and then never regenerated: every contestant must receive the same file. All people and products here are synthetic and belong to the invented Kelder brand.",
+  "references": [
+    {
+      "role": "character-sheet",
+      "file": "fixtures/references/character-sheet.png",
+      "status": "not-produced",
+      "usedBy": [
+        "character-consistency",
+        "youtube-thumbnail-presenter",
+        "long-form-presenter"
+      ],
+      "brief": "A character sheet of one synthetic person on a plain light grey background, 3:2: a woman in her late thirties who runs a small pottery studio, short dark curly hair, a small scar through her left eyebrow, freckles, clay-stained hands, a rust-coloured work apron over a grey T-shirt. Four views in one row: front, three-quarter left, profile right, and a head-and-shoulders close-up smiling. Even studio light, neutral expression in the first three views, no text on the sheet.",
+      "acceptance": [
+        "The same person in all four views, with the scar and freckles visible in the close-up.",
+        "Does not resemble a real, recognisable person.",
+        "No text, logo or watermark."
+      ]
+    },
+    {
+      "role": "product-shot",
+      "file": "fixtures/references/product-shot.png",
+      "status": "not-produced",
+      "usedBy": ["product-consistency", "product-in-motion"],
+      "brief": "A packshot on a seamless off-white background, 1:1: a 250 ml amber glass pump bottle with a matte black pump and a cream paper label. The label reads exactly, centred, in a grotesque sans: KELDER / HAND SOAP / FIG & CEDAR / 250 ml. Soft front light, a faint contact shadow, the bottle upright and filling about half the frame height.",
+      "acceptance": [
+        "Every character of the label is correct.",
+        "The label, pump and bottle edges are sharp enough to judge drift against.",
+        "No props and no other text."
+      ]
+    },
+    {
+      "role": "style-frame",
+      "file": "fixtures/references/style-frame.png",
+      "status": "not-produced",
+      "usedBy": ["first-frame-fidelity"],
+      "brief": "A 9:16 still: the character-sheet person sitting on a wooden chair beside a tall window with a sheer white curtain, afternoon light from the window, hands resting on her knees, looking just off camera. A plain plaster wall and a shelf with three pots behind her. Muted, warm grade.",
+      "acceptance": [
+        "The person matches the character sheet.",
+        "The curtain, shelf and pots are clearly visible, so drift is judgeable.",
+        "No text, logo or watermark."
+      ]
+    }
+  ]
+}

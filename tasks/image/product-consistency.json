@@ -1,13 +1,48 @@
 {
   "id": "product-consistency",
-  "version": 1,
+  "version": 2,
   "medium": "image",
   "isDraft": false,
   "title": "Product consistency",
   "rationale": "The commerce case. The product must survive relighting and relocation without the model redesigning it. Hallucinated logos, changed proportions, or invented buttons are disqualifying in a way that a slightly worse composition is not.",
   "prompt": "Using the supplied product shot, place the exact same product in three scenes: on a bathroom shelf with morning light, in a gym bag on a bench, held in one hand outdoors against a blurred street. Do not alter the product's shape, label, colour or proportions.",
-  "referenceRoles": ["product-shot"],
-  "outputSpec": { "aspectRatio": "1:1", "count": 3 },
+  "variants": [
+    {
+      "id": "pc-kitchen",
+      "prompt": "Using the supplied product shot, place the exact same product in three scenes: on a kitchen counter beside a chopping board, in a supermarket basket among other groceries, on a picnic blanket in dappled shade. Do not alter the product's shape, label, colour or proportions."
+    },
+    {
+      "id": "pc-hard-light",
+      "prompt": "Using the supplied product shot, place the exact same product in three scenes: in hard noon sun casting a strong shadow, lit by a single candle at night, under blue neon on a bar counter. Do not alter the product's shape, label, colour or proportions."
+    },
+    {
+      "id": "pc-scale",
+      "prompt": "Using the supplied product shot, place the exact same product in three scenes: very large in the foreground with a city skyline behind, small on a shop shelf among thirty other products, half inside an open drawer seen from above. Do not alter the product's shape, label, colour or proportions."
+    },
+    {
+      "id": "pc-hands",
+      "prompt": "Using the supplied product shot, place the exact same product in three scenes: being opened by two hands, held up next to a smiling face, being passed from one person to another. Do not alter the product's shape, label, colour or proportions."
+    },
+    {
+      "id": "pc-water",
+      "prompt": "Using the supplied product shot, place the exact same product in three scenes: on a wet rock by the sea with spray in the air, standing in an ice bucket, on a bathroom sink covered in water droplets. Do not alter the product's shape, label, colour or proportions."
+    },
+    {
+      "id": "pc-studio",
+      "prompt": "Using the supplied product shot, place the exact same product in three scenes: on a seamless orange backdrop, on a mirror surface with its reflection, on rough concrete with a hard rim light. Do not alter the product's shape, label, colour or proportions."
+    },
+    {
+      "id": "pc-travel",
+      "prompt": "Using the supplied product shot, place the exact same product in three scenes: in an open suitcase among folded clothes, on an aeroplane tray table, on a hotel bedside table at night. Do not alter the product's shape, label, colour or proportions."
+    }
+  ],
+  "referenceRoles": [
+    "product-shot"
+  ],
+  "outputSpec": {
+    "aspectRatio": "1:1",
+    "count": 3
+  },
   "rubric": [
     "Is the product unchanged in shape, label and colour?",
     "Does the lighting on the product match the new scene?",

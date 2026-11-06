@@ -1,13 +1,41 @@
 {
   "id": "first-frame-fidelity",
-  "version": 1,
+  "version": 2,
   "medium": "video",
   "isDraft": true,
   "title": "First-frame fidelity",
   "rationale": "The production path that matters most: art-direct a still, then animate it. Measures how much of the approved frame survives contact with the video model.",
   "prompt": "Animate the supplied style frame. The subject breathes and shifts weight; a curtain moves in the background. Nothing else changes. The first frame of the output must match the supplied frame.",
-  "referenceRoles": ["style-frame"],
-  "outputSpec": { "aspectRatio": "9:16", "count": 1, "durationSeconds": 5 },
+  "variants": [
+    {
+      "id": "ff-wind",
+      "prompt": "Animate the supplied style frame. A light wind moves the subject's hair and clothing; the subject holds their pose and the camera is still. The first frame of the output must match the supplied frame."
+    },
+    {
+      "id": "ff-head-turn",
+      "prompt": "Animate the supplied style frame. The subject slowly turns their head toward the camera and smiles. Nothing else moves. The first frame of the output must match the supplied frame."
+    },
+    {
+      "id": "ff-push-in",
+      "prompt": "Animate the supplied style frame. The camera pushes in slowly toward the subject's face; the subject stays still. The first frame of the output must match the supplied frame."
+    },
+    {
+      "id": "ff-light",
+      "prompt": "Animate the supplied style frame. A cloud passes and the light dims, then returns. The subject and camera do not move. The first frame of the output must match the supplied frame."
+    },
+    {
+      "id": "ff-exit",
+      "prompt": "Animate the supplied style frame. The subject stands and walks out of frame to the right; the empty room stays exactly as it was. The first frame of the output must match the supplied frame."
+    }
+  ],
+  "referenceRoles": [
+    "style-frame"
+  ],
+  "outputSpec": {
+    "aspectRatio": "9:16",
+    "count": 1,
+    "durationSeconds": 5
+  },
   "rubric": [
     "Does frame one match the supplied frame?",
     "Is the composition still the approved composition at the end?",

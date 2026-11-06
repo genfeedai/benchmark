@@ -1,13 +1,48 @@
 {
   "id": "character-consistency",
-  "version": 1,
+  "version": 2,
   "medium": "image",
   "isDraft": false,
   "title": "Character consistency",
   "rationale": "Serialised content needs the same face across a week of posts. This is where reference-conditioned models and edit models pull decisively ahead of pure text-to-image, and where a compile step can either help or destroy likeness.",
   "prompt": "Using the supplied character sheet, produce three frames of the same person: (1) waiting at a bus stop in the rain, (2) laughing at a kitchen table, (3) walking away from camera down a corridor. Same person, same age, same hair, three genuinely different situations.",
-  "referenceRoles": ["character-sheet"],
-  "outputSpec": { "aspectRatio": "4:5", "count": 3 },
+  "variants": [
+    {
+      "id": "cc-commute",
+      "prompt": "Using the supplied character sheet, produce three frames of the same person: (1) standing on a crowded train holding a coffee, (2) cycling across a bridge in strong wind, (3) asleep on a sofa with an open book on their chest. Same person, same age, same identity in all three, in three genuinely different situations."
+    },
+    {
+      "id": "cc-workday",
+      "prompt": "Using the supplied character sheet, produce three frames of the same person: (1) presenting to a small group at a whiteboard, (2) eating lunch alone on office steps, (3) on a video call at night, lit only by the laptop screen. Same person, same age, same identity in all three, in three genuinely different situations."
+    },
+    {
+      "id": "cc-seasons",
+      "prompt": "Using the supplied character sheet, produce three frames of the same person: (1) in a heavy coat in falling snow, (2) in a T-shirt at a summer barbecue, (3) under an umbrella in autumn leaves. Same person, same age, same identity in all three, in three genuinely different situations."
+    },
+    {
+      "id": "cc-emotions",
+      "prompt": "Using the supplied character sheet, produce three frames of the same person: (1) furious, arguing on the phone, (2) crying quietly at a window, (3) laughing so hard their eyes close. Same person, same age, same identity in all three, in three genuinely different situations."
+    },
+    {
+      "id": "cc-angles",
+      "prompt": "Using the supplied character sheet, produce three frames of the same person: (1) in strict profile, (2) seen from directly above, (3) back to camera, face visible only in a mirror. Same person, same age, same identity in all three, in three genuinely different situations."
+    },
+    {
+      "id": "cc-lighting",
+      "prompt": "Using the supplied character sheet, produce three frames of the same person: (1) under harsh noon sun, (2) lit only by a campfire, (3) under green fluorescent tubes in an underground car park. Same person, same age, same identity in all three, in three genuinely different situations."
+    },
+    {
+      "id": "cc-styling",
+      "prompt": "Using the supplied character sheet, produce three frames of the same person: (1) in formal clothes at a wedding, (2) in running kit mid-stride, (3) with wet hair just out of a swimming pool. Same person, same age, same identity in all three, in three genuinely different situations."
+    }
+  ],
+  "referenceRoles": [
+    "character-sheet"
+  ],
+  "outputSpec": {
+    "aspectRatio": "4:5",
+    "count": 3
+  },
   "rubric": [
     "Is it recognisably the same person in all three frames?",
     "Did identity survive without freezing pose and expression?",

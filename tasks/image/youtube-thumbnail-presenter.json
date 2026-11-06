@@ -1,0 +1,43 @@
+{
+  "id": "youtube-thumbnail-presenter",
+  "version": 1,
+  "medium": "image",
+  "isDraft": true,
+  "title": "YouTube thumbnail with the presenter",
+  "rationale": "Most channel thumbnails are the presenter's face with a readable expression next to the subject of the video. This adds likeness to the thumbnail rules: the face must be the channel's presenter, with the expression asked for, at a size that still reads in the feed. Draft until the public character-sheet fixture exists.",
+  "prompt": "A YouTube thumbnail for the presenter in the supplied character sheet, for a video titled \"I Quit My Job to Make Pottery Full Time\". Thumbnail text, exactly: WAS IT WORTH IT?. The presenter on the left third, head and shoulders, a doubtful half-smile at the camera; a finished vase on the right. Bold colours, text readable at phone-feed size, bottom-right corner clear.",
+  "variants": [
+    {
+      "id": "ytp-cringe",
+      "prompt": "A YouTube thumbnail for the presenter in the supplied character sheet, for a video titled \"Reacting to My First Ever Video\". Thumbnail text, exactly: CRINGE. The presenter covering half their face with one hand, wincing, a blurry old video frame behind them. Text readable at phone-feed size; bottom-right corner clear."
+    },
+    {
+      "id": "ytp-tool",
+      "prompt": "A YouTube thumbnail for the presenter in the supplied character sheet, for a video titled \"The $8 Tool Every Potter Needs\". Thumbnail text, exactly: $8. The presenter pointing at a small trimming tool held up close to the lens in the other hand, eyebrows raised. Text readable at phone-feed size; bottom-right corner clear."
+    },
+    {
+      "id": "ytp-versus",
+      "prompt": "A YouTube thumbnail for the presenter in the supplied character sheet, for a video titled \"Electric vs Gas Kiln: Which Is Better?\". Thumbnail text, exactly: VS. The presenter centred between two kilns, arms crossed, serious. Text readable at phone-feed size; bottom-right corner clear."
+    },
+    {
+      "id": "ytp-disaster",
+      "prompt": "A YouTube thumbnail for the presenter in the supplied character sheet, for a video titled \"My Kiln Exploded (Here's Why)\". Thumbnail text, exactly: WHAT HAPPENED?. The presenter shocked, hands on head, looking at a pile of broken pottery, warm light. Text readable at phone-feed size; bottom-right corner clear."
+    }
+  ],
+  "referenceRoles": [
+    "character-sheet"
+  ],
+  "outputSpec": {
+    "aspectRatio": "16:9",
+    "count": 1
+  },
+  "rubric": [
+    "View it at 168 × 94 px first, the size of a phone feed: can you read the text and tell what the video is about in about a second?",
+    "Is the presenter recognisably the person on the character sheet, with the expression asked for?",
+    "Is every character of the thumbnail text correct, and is there no other text?",
+    "Does the image promise what the title delivers, without misleading?",
+    "One clear focal point, with strong contrast between subject and background",
+    "Is the bottom-right corner clear, where the duration badge covers it?",
+    "Craft at full size, once the checks above are judged"
+  ]
+}

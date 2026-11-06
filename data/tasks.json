@@ -1,12 +1,42 @@
 [
   {
     "id": "brand-kit-fidelity",
-    "version": 1,
+    "version": 2,
     "medium": "image",
     "isDraft": false,
     "title": "Brand kit fidelity",
     "rationale": "Real content work is constrained work. A model that ignores a supplied palette and typeface is unusable for a brand however pretty its output. Uses a public synthetic brand kit so anyone can re-run this without our customers' assets.",
     "prompt": "A launch announcement image for the brand in the supplied kit. Follow the kit palette exactly, use the kit wordmark once at the size the kit specifies, and leave the lower third clear for caption text. Subject: a single ceramic mug on a concrete surface, hard side light.",
+    "variants": [
+      {
+        "id": "bkf-sale",
+        "prompt": "A sale post for the brand in the supplied kit. Headline, exactly: WINTER SALE -20%. Follow the kit palette exactly, use the kit wordmark once at the size the kit specifies, and keep the lower third clear. Subject: three stacked ceramic bowls, hard side light."
+      },
+      {
+        "id": "bkf-quote-card",
+        "prompt": "A quote card for the brand in the supplied kit. The quote, exactly: \"Made slowly, used daily.\" Typography only, set in the kit typeface on the kit paper colour, wordmark once as specified, accent on one element only. No photograph."
+      },
+      {
+        "id": "bkf-workshop",
+        "prompt": "An invitation for the brand in the supplied kit. Text, exactly, on three lines: OPEN STUDIO / SAT 12 APRIL / 10-4. Follow the palette and every kit rule. Subject: hands shaping clay on a wheel, cropped tight."
+      },
+      {
+        "id": "bkf-lifestyle",
+        "prompt": "A lifestyle image for the brand in the supplied kit: a ceramic teapot on a breakfast table by a window. The props and grade sit inside the kit palette, the wordmark appears once as specified, no gradients or shadows are added as graphics, and the lower third stays clear."
+      },
+      {
+        "id": "bkf-flat-lay",
+        "prompt": "A flat lay for the brand in the supplied kit: four ceramic pieces on the kit paper colour, shot top-down in hard light. Wordmark once as the kit specifies; exactly one piece in the accent colour."
+      },
+      {
+        "id": "bkf-hiring",
+        "prompt": "A hiring post for the brand in the supplied kit. Text, exactly, on two lines: WE'RE HIRING / STUDIO ASSISTANT. Typographic layout only, kit palette, wordmark once, lower third clear."
+      },
+      {
+        "id": "bkf-new-glaze",
+        "prompt": "A product announcement for the brand in the supplied kit. Text, exactly: NEW GLAZE: RUST. Subject: a single vase whose glaze is the kit accent colour; everything else stays in the kit's ink, paper and muted colours."
+      }
+    ],
     "referenceRoles": [
       "brand-kit"
     ],
@@ -23,12 +53,42 @@
   },
   {
     "id": "character-consistency",
-    "version": 1,
+    "version": 2,
     "medium": "image",
     "isDraft": false,
     "title": "Character consistency",
     "rationale": "Serialised content needs the same face across a week of posts. This is where reference-conditioned models and edit models pull decisively ahead of pure text-to-image, and where a compile step can either help or destroy likeness.",
     "prompt": "Using the supplied character sheet, produce three frames of the same person: (1) waiting at a bus stop in the rain, (2) laughing at a kitchen table, (3) walking away from camera down a corridor. Same person, same age, same hair, three genuinely different situations.",
+    "variants": [
+      {
+        "id": "cc-commute",
+        "prompt": "Using the supplied character sheet, produce three frames of the same person: (1) standing on a crowded train holding a coffee, (2) cycling across a bridge in strong wind, (3) asleep on a sofa with an open book on their chest. Same person, same age, same identity in all three, in three genuinely different situations."
+      },
+      {
+        "id": "cc-workday",
+        "prompt": "Using the supplied character sheet, produce three frames of the same person: (1) presenting to a small group at a whiteboard, (2) eating lunch alone on office steps, (3) on a video call at night, lit only by the laptop screen. Same person, same age, same identity in all three, in three genuinely different situations."
+      },
+      {
+        "id": "cc-seasons",
+        "prompt": "Using the supplied character sheet, produce three frames of the same person: (1) in a heavy coat in falling snow, (2) in a T-shirt at a summer barbecue, (3) under an umbrella in autumn leaves. Same person, same age, same identity in all three, in three genuinely different situations."
+      },
+      {
+        "id": "cc-emotions",
+        "prompt": "Using the supplied character sheet, produce three frames of the same person: (1) furious, arguing on the phone, (2) crying quietly at a window, (3) laughing so hard their eyes close. Same person, same age, same identity in all three, in three genuinely different situations."
+      },
+      {
+        "id": "cc-angles",
+        "prompt": "Using the supplied character sheet, produce three frames of the same person: (1) in strict profile, (2) seen from directly above, (3) back to camera, face visible only in a mirror. Same person, same age, same identity in all three, in three genuinely different situations."
+      },
+      {
+        "id": "cc-lighting",
+        "prompt": "Using the supplied character sheet, produce three frames of the same person: (1) under harsh noon sun, (2) lit only by a campfire, (3) under green fluorescent tubes in an underground car park. Same person, same age, same identity in all three, in three genuinely different situations."
+      },
+      {
+        "id": "cc-styling",
+        "prompt": "Using the supplied character sheet, produce three frames of the same person: (1) in formal clothes at a wedding, (2) in running kit mid-stride, (3) with wet hair just out of a swimming pool. Same person, same age, same identity in all three, in three genuinely different situations."
+      }
+    ],
     "referenceRoles": [
       "character-sheet"
     ],
@@ -45,12 +105,42 @@
   },
   {
     "id": "product-consistency",
-    "version": 1,
+    "version": 2,
     "medium": "image",
     "isDraft": false,
     "title": "Product consistency",
     "rationale": "The commerce case. The product must survive relighting and relocation without the model redesigning it. Hallucinated logos, changed proportions, or invented buttons are disqualifying in a way that a slightly worse composition is not.",
     "prompt": "Using the supplied product shot, place the exact same product in three scenes: on a bathroom shelf with morning light, in a gym bag on a bench, held in one hand outdoors against a blurred street. Do not alter the product's shape, label, colour or proportions.",
+    "variants": [
+      {
+        "id": "pc-kitchen",
+        "prompt": "Using the supplied product shot, place the exact same product in three scenes: on a kitchen counter beside a chopping board, in a supermarket basket among other groceries, on a picnic blanket in dappled shade. Do not alter the product's shape, label, colour or proportions."
+      },
+      {
+        "id": "pc-hard-light",
+        "prompt": "Using the supplied product shot, place the exact same product in three scenes: in hard noon sun casting a strong shadow, lit by a single candle at night, under blue neon on a bar counter. Do not alter the product's shape, label, colour or proportions."
+      },
+      {
+        "id": "pc-scale",
+        "prompt": "Using the supplied product shot, place the exact same product in three scenes: very large in the foreground with a city skyline behind, small on a shop shelf among thirty other products, half inside an open drawer seen from above. Do not alter the product's shape, label, colour or proportions."
+      },
+      {
+        "id": "pc-hands",
+        "prompt": "Using the supplied product shot, place the exact same product in three scenes: being opened by two hands, held up next to a smiling face, being passed from one person to another. Do not alter the product's shape, label, colour or proportions."
+      },
+      {
+        "id": "pc-water",
+        "prompt": "Using the supplied product shot, place the exact same product in three scenes: on a wet rock by the sea with spray in the air, standing in an ice bucket, on a bathroom sink covered in water droplets. Do not alter the product's shape, label, colour or proportions."
+      },
+      {
+        "id": "pc-studio",
+        "prompt": "Using the supplied product shot, place the exact same product in three scenes: on a seamless orange backdrop, on a mirror surface with its reflection, on rough concrete with a hard rim light. Do not alter the product's shape, label, colour or proportions."
+      },
+      {
+        "id": "pc-travel",
+        "prompt": "Using the supplied product shot, place the exact same product in three scenes: in an open suitcase among folded clothes, on an aeroplane tray table, on a hotel bedside table at night. Do not alter the product's shape, label, colour or proportions."
+      }
+    ],
     "referenceRoles": [
       "product-shot"
     ],
@@ -67,12 +157,42 @@
   },
   {
     "id": "prompt-adherence",
-    "version": 1,
+    "version": 2,
     "medium": "image",
     "isDraft": false,
     "title": "Prompt adherence",
     "rationale": "Counting, spatial relations and negation are the three instructions image models most reliably ignore. This task is deliberately unglamorous: a beautiful image that gets the brief wrong loses to a plainer one that gets it right.",
     "prompt": "Exactly five green apples and one lemon on a wooden table. The lemon is to the left of every apple. No leaves, no basket, no knife, no text. Overhead view, soft diffused light.",
+    "variants": [
+      {
+        "id": "pa-mug-row",
+        "prompt": "Four coffee mugs in a row on a white shelf, from left to right: red, blue, yellow, green. The blue mug is upside down. The green mug's handle faces away from the camera so it is not visible. No people, no text, no other objects. Straight-on view."
+      },
+      {
+        "id": "pa-chairs",
+        "prompt": "Three wooden chairs and one red stool in an empty room with bare walls. The stool stands between the second and third chair. One chair, and only one, is knocked over. No windows, no rug, no plants."
+      },
+      {
+        "id": "pa-birds",
+        "prompt": "Exactly seven birds sitting on a single telephone wire against a plain grey sky, and one more bird flying away to the right. No buildings, no trees, no second wire."
+      },
+      {
+        "id": "pa-clock",
+        "prompt": "An analogue wall clock on a plain white wall showing exactly ten past four. Roman numerals, no second hand, no logo or text anywhere on the dial."
+      },
+      {
+        "id": "pa-cards",
+        "prompt": "A person's left hand holding three fanned playing cards: the ace of spades, the seven of hearts and the two of clubs, in that order from left to right. Their right hand is not in frame. No rings, no watch."
+      },
+      {
+        "id": "pa-glass",
+        "prompt": "A glass of water on a table with a pencil standing in it, the pencil looking bent at the waterline. Behind the glass, out of focus, exactly two lit candles. No flowers, no plates, no cutlery."
+      },
+      {
+        "id": "pa-book-stack",
+        "prompt": "A stack of exactly six books on a desk. The second book from the top is upside down. A blue pen lies on top of the stack; a green pen is under the bottom book with only its tip showing. No lamp, no laptop, no mug."
+      }
+    ],
     "referenceRoles": [
       "none"
     ],
@@ -89,12 +209,42 @@
   },
   {
     "id": "text-in-image",
-    "version": 1,
+    "version": 2,
     "medium": "image",
     "isDraft": false,
     "title": "Legible text",
     "rationale": "The single most commercially decisive image capability and the one that moves most between releases. A model that cannot set six words correctly cannot make an ad, a thumbnail, or a menu.",
     "prompt": "A hand-painted sandwich board outside a coffee shop. The board reads exactly:\nCLOSED MONDAYS\nOPEN 7-4 OTHERWISE\nChalk on black, slightly uneven letterforms, wet pavement, early morning.",
+    "variants": [
+      {
+        "id": "tii-neon-bar",
+        "prompt": "A pink neon sign on a dark brick wall inside a bar. The sign reads exactly:\nLAST ORDERS\n11:45 PM\nGlass tubes and their mounts visible, a soft glow on the bricks, no other text in frame."
+      },
+      {
+        "id": "tii-receipt",
+        "prompt": "A close-up of a crumpled paper receipt on a café table. The printed lines read exactly:\nFLAT WHITE 3.40\nCROISSANT 2.85\nTOTAL 6.25\nThermal print in a monospaced face, a coffee ring on the paper."
+      },
+      {
+        "id": "tii-accents",
+        "prompt": "A screen-printed concert poster pasted on a wall. Top line in large letters, exactly: CAFÉ SOCIÉTÉ. Below it, smaller, exactly: Jeudi 14 mars · 20h30. Two inks, orange and navy, slightly misregistered, one corner torn."
+      },
+      {
+        "id": "tii-label",
+        "prompt": "A product shot of a matte white tub of hand cream on a beige surface. The label reads exactly:\nOAT & SHEA\nHAND CREAM\n75 ml\nCentred sans-serif label, soft studio light."
+      },
+      {
+        "id": "tii-handwriting",
+        "prompt": "A yellow sticky note on a laptop screen. Handwritten in black marker it says exactly:\ncall Jo back\nbefore 3pm!!\nShallow depth of field, the screen behind it blurred."
+      },
+      {
+        "id": "tii-street-sign",
+        "prompt": "A blue enamel street sign on a pale stone wall, photographed from slightly below. It reads exactly: Rue des Quatre-Vents. A smaller line under it reads exactly: 6e Arr. Every accent and hyphen correct, no other text in frame."
+      },
+      {
+        "id": "tii-menu-board",
+        "prompt": "A café chalkboard menu on a wall, photographed straight on. It reads exactly, one item per line:\nSOUP OF THE DAY 6\nGRILLED CHEESE 8\nKALE SALAD 9\nBROWNIE 4\nNo extra items, prices aligned on the right."
+      }
+    ],
     "referenceRoles": [
       "none"
     ],
@@ -111,12 +261,42 @@
   },
   {
     "id": "unbranded-quality",
-    "version": 1,
+    "version": 2,
     "medium": "image",
     "isDraft": false,
     "title": "Unbranded craft",
     "rationale": "Strips away every constraint except making a good picture. Separates models whose defaults are tasteful from models that need heavy prompting to stop looking synthetic. This is the task a raw model is most likely to win.",
     "prompt": "An editorial photograph of a woman in her fifties closing up a neighbourhood bakery at dusk. Shot on 35mm, available light only, the shutters half-down behind her. She is tired and pleased. Natural skin texture, no retouching.",
+    "variants": [
+      {
+        "id": "uq-harbour-net",
+        "prompt": "A documentary photograph of an old fisherman mending a net on a harbour wall at first light. Medium format, overcast sky, cold palette. His hands are the sharpest thing in the frame. Natural skin texture, no retouching."
+      },
+      {
+        "id": "uq-kitchen-steam",
+        "prompt": "A still life of a cast-iron pan of fried eggs on a gas hob, steam rising through a shaft of window light, a wooden spoon resting on the rim. 50mm, shallow depth of field, slightly underexposed, real grease on the tiles behind."
+      },
+      {
+        "id": "uq-kerb-laugh",
+        "prompt": "A teenage boy sitting on a kerb with a skateboard across his knees, laughing at something out of frame. Late afternoon backlight, a little lens flare, 35mm film grain. Candid, not posed."
+      },
+      {
+        "id": "uq-mountain-hut",
+        "prompt": "A wide landscape photograph of a stone mountain hut below a ridge in fog, one lit window, a figure with a head torch walking toward it. Blue hour, long-lens compression, nothing that looks like a replaced sky."
+      },
+      {
+        "id": "uq-night-market",
+        "prompt": "A night market in the rain, shot from inside a stall looking out: bare bulbs on a wire, wet tarpaulin, blurred passers-by under umbrellas, steam from a wok in the foreground. Available light only, high-ISO grain."
+      },
+      {
+        "id": "uq-old-dog",
+        "prompt": "A portrait of an old grey-muzzled Labrador lying on a worn wooden floor, head on paws, looking at the camera. Window light from the left, dust in the air, 85mm."
+      },
+      {
+        "id": "uq-empty-office",
+        "prompt": "An empty open-plan office at 7pm: chairs pushed in at odd angles, one monitor still on, city lights through floor-to-ceiling windows, a cleaner's trolley by the lift. Architectural photograph, verticals kept straight."
+      }
+    ],
     "referenceRoles": [
       "none"
     ],
@@ -132,13 +312,144 @@
     ]
   },
   {
-    "id": "camera-instruction",
+    "id": "youtube-thumbnail",
     "version": 1,
+    "medium": "image",
+    "isDraft": false,
+    "title": "YouTube thumbnail",
+    "rationale": "The image that decides whether a video gets watched, and a format with hard rules a pretty picture can still fail: three or four words that must be spelled right and read at phone-feed size, one focal point, a promise that matches the title, and a bottom-right corner the duration badge will cover. Judges look at the thumbnail at feed size before full size, because that is where it is actually seen.",
+    "prompt": "A YouTube thumbnail for a video titled \"I Tried Every Budget Espresso Machine\". Thumbnail text, exactly: UNDER $100?. One clear focal point: a cheap espresso machine mid-pour, crema visible. Bold, high-contrast colours; the text large enough to read at phone-feed size. Keep the bottom-right corner free of text and key detail.",
+    "variants": [
+      {
+        "id": "ytt-finance",
+        "prompt": "A YouTube thumbnail for a video titled \"How I Paid Off $40,000 in Two Years\". Thumbnail text, exactly: DEBT FREE. A person holding up a credit card cut in half, relieved, against a plain saturated background. Text readable at phone-feed size; bottom-right corner clear."
+      },
+      {
+        "id": "ytt-phone-test",
+        "prompt": "A YouTube thumbnail for a video titled \"Budget Phone vs Flagship: Blind Camera Test\". Thumbnail text, exactly: CAN YOU TELL?. Two unbranded phones side by side on a split two-colour background, each screen showing the same photo of a sunset. No logos. Text readable at phone-feed size; bottom-right corner clear."
+      },
+      {
+        "id": "ytt-sourdough",
+        "prompt": "A YouTube thumbnail for a video titled \"The Only Sourdough Guide You Need\". Thumbnail text, exactly: NO KNEAD. A sourdough loaf cut in half showing an open, airy crumb, flour dusted on a dark surface. Text readable at phone-feed size; bottom-right corner clear."
+      },
+      {
+        "id": "ytt-push-ups",
+        "prompt": "A YouTube thumbnail for a video titled \"I Did 100 Push-Ups a Day for 30 Days\". Thumbnail text, exactly: DAY 30. A person mid push-up, shot low and close, hard light, sweat visible. Text readable at phone-feed size; bottom-right corner clear."
+      },
+      {
+        "id": "ytt-travel",
+        "prompt": "A YouTube thumbnail for a video titled \"Japan on $50 a Day\". Thumbnail text, exactly: $50/DAY. A narrow lantern-lit street at dusk, a backpacker seen from behind looking down it. Text readable at phone-feed size; bottom-right corner clear."
+      },
+      {
+        "id": "ytt-gaming",
+        "prompt": "A YouTube thumbnail for a video titled \"Beating the Hardest Boss With No Armour\". Thumbnail text, exactly: NO ARMOUR. A knight in a plain linen shirt holding a sword, facing a huge dragon in a cavern, dramatic rim light. Original characters only. Text readable at phone-feed size; bottom-right corner clear."
+      },
+      {
+        "id": "ytt-explainer",
+        "prompt": "A YouTube thumbnail for a video titled \"Why Planes Avoid the Middle of the Pacific\". Thumbnail text, exactly: WHY?. A globe showing the Pacific with a curved red flight path bending north around it. Text readable at phone-feed size; bottom-right corner clear."
+      },
+      {
+        "id": "ytt-diy",
+        "prompt": "A YouTube thumbnail for a video titled \"I Built a Desk for $60\". Thumbnail text, exactly: $60 DESK. A finished plywood desk in a small bright room, a circular saw on the floor in the foreground. Text readable at phone-feed size; bottom-right corner clear."
+      },
+      {
+        "id": "ytt-no-text",
+        "prompt": "A YouTube thumbnail for a video titled \"Snowed-In Cabin, Silent Morning (4K ambience)\". No text at all. A small wooden cabin under deep snow at dawn, smoke from the chimney, one warm window. Calm, but readable as one image at phone-feed size; bottom-right corner clear."
+      }
+    ],
+    "referenceRoles": [
+      "none"
+    ],
+    "outputSpec": {
+      "aspectRatio": "16:9",
+      "count": 1
+    },
+    "rubric": [
+      "View it at 168 × 94 px first, the size of a phone feed: can you read the text and tell what the video is about in about a second?",
+      "Is every character of the thumbnail text correct, and is there no other text?",
+      "Does the image promise what the title delivers, without misleading?",
+      "One clear focal point, with strong contrast between subject and background",
+      "Is the bottom-right corner clear, where the duration badge covers it?",
+      "Craft at full size, once the checks above are judged"
+    ]
+  },
+  {
+    "id": "youtube-thumbnail-presenter",
+    "version": 1,
+    "medium": "image",
+    "isDraft": true,
+    "title": "YouTube thumbnail with the presenter",
+    "rationale": "Most channel thumbnails are the presenter's face with a readable expression next to the subject of the video. This adds likeness to the thumbnail rules: the face must be the channel's presenter, with the expression asked for, at a size that still reads in the feed. Draft until the public character-sheet fixture exists.",
+    "prompt": "A YouTube thumbnail for the presenter in the supplied character sheet, for a video titled \"I Quit My Job to Make Pottery Full Time\". Thumbnail text, exactly: WAS IT WORTH IT?. The presenter on the left third, head and shoulders, a doubtful half-smile at the camera; a finished vase on the right. Bold colours, text readable at phone-feed size, bottom-right corner clear.",
+    "variants": [
+      {
+        "id": "ytp-cringe",
+        "prompt": "A YouTube thumbnail for the presenter in the supplied character sheet, for a video titled \"Reacting to My First Ever Video\". Thumbnail text, exactly: CRINGE. The presenter covering half their face with one hand, wincing, a blurry old video frame behind them. Text readable at phone-feed size; bottom-right corner clear."
+      },
+      {
+        "id": "ytp-tool",
+        "prompt": "A YouTube thumbnail for the presenter in the supplied character sheet, for a video titled \"The $8 Tool Every Potter Needs\". Thumbnail text, exactly: $8. The presenter pointing at a small trimming tool held up close to the lens in the other hand, eyebrows raised. Text readable at phone-feed size; bottom-right corner clear."
+      },
+      {
+        "id": "ytp-versus",
+        "prompt": "A YouTube thumbnail for the presenter in the supplied character sheet, for a video titled \"Electric vs Gas Kiln: Which Is Better?\". Thumbnail text, exactly: VS. The presenter centred between two kilns, arms crossed, serious. Text readable at phone-feed size; bottom-right corner clear."
+      },
+      {
+        "id": "ytp-disaster",
+        "prompt": "A YouTube thumbnail for the presenter in the supplied character sheet, for a video titled \"My Kiln Exploded (Here's Why)\". Thumbnail text, exactly: WHAT HAPPENED?. The presenter shocked, hands on head, looking at a pile of broken pottery, warm light. Text readable at phone-feed size; bottom-right corner clear."
+      }
+    ],
+    "referenceRoles": [
+      "character-sheet"
+    ],
+    "outputSpec": {
+      "aspectRatio": "16:9",
+      "count": 1
+    },
+    "rubric": [
+      "View it at 168 × 94 px first, the size of a phone feed: can you read the text and tell what the video is about in about a second?",
+      "Is the presenter recognisably the person on the character sheet, with the expression asked for?",
+      "Is every character of the thumbnail text correct, and is there no other text?",
+      "Does the image promise what the title delivers, without misleading?",
+      "One clear focal point, with strong contrast between subject and background",
+      "Is the bottom-right corner clear, where the duration badge covers it?",
+      "Craft at full size, once the checks above are judged"
+    ]
+  },
+  {
+    "id": "camera-instruction",
+    "version": 2,
     "medium": "video",
     "isDraft": true,
     "title": "Camera instruction",
     "rationale": "Whether the model can be directed. A generator that produces a lovely shot other than the one you asked for cannot be used in an edit.",
     "prompt": "Start on a close-up of a kettle beginning to steam. Push in slowly for two seconds, then whip-pan left to a person looking up from a laptop. No cuts.",
+    "variants": [
+      {
+        "id": "ci-pull-back",
+        "prompt": "Start on an extreme close-up of an eye. Pull back steadily for the whole shot until a woman is revealed standing alone in an empty car park. No cuts and no zoom: the camera physically moves back."
+      },
+      {
+        "id": "ci-orbit",
+        "prompt": "A slow half orbit around a chef plating a dish, starting behind his left shoulder and ending facing him. The camera stays at eye level. No cuts."
+      },
+      {
+        "id": "ci-crane-up",
+        "prompt": "Start at street level behind a cyclist waiting at a red light, then crane up smoothly to a high wide view of the junction as the light turns green and traffic moves. No cuts."
+      },
+      {
+        "id": "ci-locked-off",
+        "prompt": "A locked-off static shot of a kitchen doorway. The camera does not move at all: no drift, no shake, no zoom. A cat walks through the doorway from left to right and leaves the frame."
+      },
+      {
+        "id": "ci-rack-focus",
+        "prompt": "A rack focus: start sharp on raindrops on a window, then pull focus to a man reading a letter at a table behind the glass. The camera does not move. No cuts."
+      },
+      {
+        "id": "ci-tilt-up",
+        "prompt": "Tilt up slowly from a pair of muddy boots on a doorstep to the face of an old farmer looking out at the rain. Only tilt: the camera does not travel. No cuts."
+      }
+    ],
     "referenceRoles": [
       "none"
     ],
@@ -156,12 +467,34 @@
   },
   {
     "id": "first-frame-fidelity",
-    "version": 1,
+    "version": 2,
     "medium": "video",
     "isDraft": true,
     "title": "First-frame fidelity",
     "rationale": "The production path that matters most: art-direct a still, then animate it. Measures how much of the approved frame survives contact with the video model.",
     "prompt": "Animate the supplied style frame. The subject breathes and shifts weight; a curtain moves in the background. Nothing else changes. The first frame of the output must match the supplied frame.",
+    "variants": [
+      {
+        "id": "ff-wind",
+        "prompt": "Animate the supplied style frame. A light wind moves the subject's hair and clothing; the subject holds their pose and the camera is still. The first frame of the output must match the supplied frame."
+      },
+      {
+        "id": "ff-head-turn",
+        "prompt": "Animate the supplied style frame. The subject slowly turns their head toward the camera and smiles. Nothing else moves. The first frame of the output must match the supplied frame."
+      },
+      {
+        "id": "ff-push-in",
+        "prompt": "Animate the supplied style frame. The camera pushes in slowly toward the subject's face; the subject stays still. The first frame of the output must match the supplied frame."
+      },
+      {
+        "id": "ff-light",
+        "prompt": "Animate the supplied style frame. A cloud passes and the light dims, then returns. The subject and camera do not move. The first frame of the output must match the supplied frame."
+      },
+      {
+        "id": "ff-exit",
+        "prompt": "Animate the supplied style frame. The subject stands and walks out of frame to the right; the empty room stays exactly as it was. The first frame of the output must match the supplied frame."
+      }
+    ],
     "referenceRoles": [
       "style-frame"
     ],
@@ -178,6 +511,44 @@
     ]
   },
   {
+    "id": "kinetic-typography",
+    "version": 1,
+    "medium": "video",
+    "isDraft": true,
+    "title": "Kinetic typography",
+    "rationale": "Text-led motion is the most posted video format for brands and the one generative video handles worst. Contestants are routes, not single models, so a video model and a code-rendered composition (for example Remotion or HyperFrames, see genfeedai/genfeed.ai#9570) meet on the same brief and are judged blind on the same output.",
+    "prompt": "A 10-second vertical kinetic-typography clip for the brand in the supplied kit. On screen, in order, one line at a time, exactly:\nMOST STUDIOS QUIT\nIN 90 DAYS\nNOT BECAUSE THEY'RE LAZY\nBECAUSE THEY WAIT\nTO BE FINISHED\nEnd on the kit wordmark. Kit palette and rules throughout; lines never overlap; each line holds long enough to read.",
+    "variants": [
+      {
+        "id": "kt-stat",
+        "prompt": "A 10-second vertical kinetic-typography clip for the brand in the supplied kit. On screen, in order, exactly:\n3 OUT OF 4\nBUYERS\nCHECK REVIEWS FIRST\nThe 3 counts up from 0. End on the kit wordmark. Kit palette and rules throughout; each line holds long enough to read."
+      },
+      {
+        "id": "kt-launch",
+        "prompt": "A 10-second vertical kinetic-typography clip for the brand in the supplied kit. On screen, in order, exactly:\nNEW GLAZE\nRUST\nIN STORE FRIDAY\nEach line slides in from the left. End on the kit wordmark. Kit palette and rules throughout; each line holds long enough to read."
+      },
+      {
+        "id": "kt-list",
+        "prompt": "A 10-second vertical kinetic-typography clip for the brand in the supplied kit. On screen, in order, exactly:\n3 THINGS\n1. FILM THE PROCESS\n2. POST AT ONE TIME\n3. DON'T WAIT\nEach item appears on its own beat. End on the kit wordmark. Kit palette and rules throughout; each line holds long enough to read."
+      }
+    ],
+    "referenceRoles": [
+      "brand-kit"
+    ],
+    "outputSpec": {
+      "aspectRatio": "9:16",
+      "count": 1,
+      "durationSeconds": 10
+    },
+    "rubric": [
+      "Is every word correct and in the requested order?",
+      "Does each line stay on screen long enough to read on a phone?",
+      "Are the kit palette, wordmark and rules followed?",
+      "Is the motion smooth and purposeful, with no overlaps or jitter?",
+      "Does it end cleanly on the wordmark?"
+    ]
+  },
+  {
     "id": "long-form-presenter",
     "version": 1,
     "medium": "video",
@@ -185,6 +556,7 @@
     "title": "Voice note to long-form presenter video",
     "rationale": "The whole production path in one task: a rambling voice note becomes a scripted talk, a presenter who stays the same person and in lip sync for minutes, B-roll that matches what is being said, and an edit with no visible seams. Short clips hide drift; four minutes does not. Contestants are routes rather than single models, so a compiled route and the raw avatar model it calls can meet head to head.",
     "prompt": "Turn the supplied voice note (fixtures/long-form/voice-note.json) into a finished talking-head video of at most eight minutes, presented by the person in the supplied character sheet. Clean the voice note into a script that keeps the speaker's points and order, add B-roll over the presenter where it illustrates what is said, and burn in captions. One continuous presenter; no music.",
+    "variants": [],
     "referenceRoles": [
       "transcript",
       "character-sheet"
@@ -205,12 +577,38 @@
   },
   {
     "id": "motion-coherence",
-    "version": 1,
+    "version": 2,
     "medium": "video",
     "isDraft": true,
     "title": "Motion coherence",
     "rationale": "Whether a subject survives its own movement. Limb count, ground contact and object permanence are where video models still fail in ways a still image never reveals.",
     "prompt": "A courier carries a stack of four flat boxes across a busy pavement, turns side-on to pass a lamp post, and continues. Single continuous shot, handheld, daylight.",
+    "variants": [
+      {
+        "id": "mc-juggler",
+        "prompt": "A street performer juggles three red balls for several throws, then catches all three. Single continuous locked-off shot, daylight."
+      },
+      {
+        "id": "mc-frisbee",
+        "prompt": "A dog runs across a park, leaps and catches a frisbee in mid-air, lands and runs back toward the camera. Single continuous tracking shot, afternoon light."
+      },
+      {
+        "id": "mc-pour",
+        "prompt": "A waiter pours red wine into two glasses on a table, one after the other, without spilling. Continuous close shot, warm restaurant light."
+      },
+      {
+        "id": "mc-dance",
+        "prompt": "Two people dance a simple swing turn in a kitchen, holding hands throughout. Continuous wide shot."
+      },
+      {
+        "id": "mc-staircase",
+        "prompt": "A child runs down a spiral staircase holding a balloon on a string. The camera follows from above. Continuous shot."
+      },
+      {
+        "id": "mc-shoelace",
+        "prompt": "Close-up of two hands tying a shoelace into a bow and pulling it tight. Continuous shot, natural light."
+      }
+    ],
     "referenceRoles": [
       "none"
     ],
@@ -224,6 +622,171 @@
       "Limbs and hands through the turn",
       "Feet contact the ground without sliding",
       "Does the background persist as the camera moves"
+    ]
+  },
+  {
+    "id": "native-audio-dialogue",
+    "version": 1,
+    "medium": "video",
+    "isDraft": true,
+    "title": "Spoken line with native audio",
+    "rationale": "Video models now generate sound with the picture, and social video is watched with sound on. This checks the three things that make a talking clip usable: the exact words, lips that match them, and ambient sound that belongs to the scene. Only contestants that generate audio can enter this task.",
+    "prompt": "Two friends at a café table. The woman says, exactly: \"You said it would take ten minutes.\" The man laughs and answers, exactly: \"I said about ten minutes.\" Café sound underneath, cups clinking. Single shot, no music.",
+    "variants": [
+      {
+        "id": "nad-beach-call",
+        "prompt": "A man on a windy beach answers his phone and says, exactly: \"I can't hear you, I'll call you back.\" Wind and waves loud in the sound. Handheld, single shot, no music."
+      },
+      {
+        "id": "nad-kitchen",
+        "prompt": "A grandmother in a kitchen tells the camera, exactly: \"The secret is you don't stir it.\" A pot bubbles beside her. Close-up, single shot, no music."
+      },
+      {
+        "id": "nad-meeting",
+        "prompt": "In a meeting room a woman stands and says to the table, exactly: \"Okay, let's ship it on Friday.\" Two people clap. Single shot, no music."
+      },
+      {
+        "id": "nad-whisper",
+        "prompt": "In a dark cinema a teenager leans over and whispers to her friend, exactly: \"Did you see that?\" The film's sound is faint in the background. Single shot, no music."
+      }
+    ],
+    "referenceRoles": [
+      "none"
+    ],
+    "outputSpec": {
+      "aspectRatio": "16:9",
+      "count": 1,
+      "durationSeconds": 8
+    },
+    "rubric": [
+      "Are the spoken words exactly the ones in the prompt, said by the right person?",
+      "Do the lips match the words?",
+      "Does the ambient sound belong to the scene, with no music?",
+      "Is the delivery natural for the moment?",
+      "Craft of the picture, once sound is judged"
+    ]
+  },
+  {
+    "id": "product-in-motion",
+    "version": 1,
+    "medium": "video",
+    "isDraft": true,
+    "title": "Product in motion",
+    "rationale": "The commerce case for video: start from an approved product shot and move it, without the label, shape or colour drifting. A product that changes between frames cannot run as an ad.",
+    "prompt": "Using the supplied product shot as the first frame, a hand enters, picks the product up, turns it to show the side, and sets it down. The product's shape, label and colour must not change at any point.",
+    "variants": [
+      {
+        "id": "pim-orbit",
+        "prompt": "Using the supplied product shot as the first frame, the camera orbits a quarter turn around the product. The product stays identical; only the viewing angle changes."
+      },
+      {
+        "id": "pim-splash",
+        "prompt": "Using the supplied product shot as the first frame, water splashes over the product and runs off it. The label stays legible and unchanged."
+      },
+      {
+        "id": "pim-unbox",
+        "prompt": "Using the supplied product shot as the first frame, two hands lift the product out of a plain cardboard box and set it on the box lid. The product does not change."
+      },
+      {
+        "id": "pim-shelf",
+        "prompt": "Using the supplied product shot as the first frame, the camera pulls back from the product to reveal it on a shop shelf among other items. The product does not change."
+      }
+    ],
+    "referenceRoles": [
+      "product-shot"
+    ],
+    "outputSpec": {
+      "aspectRatio": "9:16",
+      "count": 1,
+      "durationSeconds": 5
+    },
+    "rubric": [
+      "Is the product unchanged in shape, label and colour in every frame?",
+      "Does frame one match the supplied product shot?",
+      "Is the motion physically plausible, hands included?",
+      "Could a brand run this as an ad without fixes?"
+    ]
+  },
+  {
+    "id": "social-hook",
+    "version": 1,
+    "medium": "video",
+    "isDraft": true,
+    "title": "First-second hook",
+    "rationale": "A vertical social clip lives or dies in its first second. This asks for one specific, striking opening shot and judges whether it would stop a scroll, whether it is the shot that was asked for, and whether it works with the sound off.",
+    "prompt": "The opening of a vertical social video for a coffee brand: a cup is knocked off a table, freezes in mid-air with the coffee suspended, then the camera whips around it. The first second must be impossible to scroll past. No text, no logo.",
+    "variants": [
+      {
+        "id": "sh-sneaker",
+        "prompt": "The opening of a vertical social video for a running shoe: a shoe lands in a puddle in extreme slow motion, the splash forming a crown, then normal speed snaps back as the runner leaves frame. No text, no logo."
+      },
+      {
+        "id": "sh-serum",
+        "prompt": "The opening of a vertical social video for a skincare brand: a single drop of serum falls onto glass and spreads into a perfect circle. Extreme macro, clean white light. No text, no logo."
+      },
+      {
+        "id": "sh-burger",
+        "prompt": "The opening of a vertical social video for a burger restaurant: a knife slices a burger in half straight toward the camera, cheese stretching between the halves. No text, no logo."
+      },
+      {
+        "id": "sh-kettlebell",
+        "prompt": "The opening of a vertical social video for a gym: a kettlebell drops onto a rubber floor right in front of the lens, chalk dust lifts, the camera jolts on impact. No text, no logo."
+      }
+    ],
+    "referenceRoles": [
+      "none"
+    ],
+    "outputSpec": {
+      "aspectRatio": "9:16",
+      "count": 1,
+      "durationSeconds": 5
+    },
+    "rubric": [
+      "Would you stop scrolling in the first second?",
+      "Is it the shot the prompt asked for?",
+      "Does it work with the sound off?",
+      "Craft, and no text or logo anywhere"
+    ]
+  },
+  {
+    "id": "text-in-video",
+    "version": 1,
+    "medium": "video",
+    "isDraft": true,
+    "title": "Legible text in motion",
+    "rationale": "Text that is correct in frame one and melts by frame forty is the most common reason a generated clip cannot be used for a brand. This holds a short piece of copy on a surface while the camera or subject moves.",
+    "prompt": "A slow push-in on a shop window at night. Painted on the glass in gold letters, exactly: OPEN LATE. The letters stay legible and unchanged for the whole clip while reflections of passing cars slide across the glass.",
+    "variants": [
+      {
+        "id": "tiv-billboard",
+        "prompt": "A roadside billboard reads exactly: SLOW DOWN. The camera drives past it from left to right. The text stays correct as the perspective changes."
+      },
+      {
+        "id": "tiv-t-shirt",
+        "prompt": "A runner jogs toward the camera wearing a white T-shirt printed with, exactly: RUN CLUB 07. The print stays readable and unchanged as the fabric moves."
+      },
+      {
+        "id": "tiv-coffee-cup",
+        "prompt": "A hand turns a paper coffee cup on a counter to reveal a name written on it in marker, exactly: SAM. Close-up, continuous."
+      },
+      {
+        "id": "tiv-end-card",
+        "prompt": "An end card: on a plain off-white background the words FOLLOW FOR PART 2 appear one letter at a time and then hold. No other text."
+      }
+    ],
+    "referenceRoles": [
+      "none"
+    ],
+    "outputSpec": {
+      "aspectRatio": "9:16",
+      "count": 1,
+      "durationSeconds": 5
+    },
+    "rubric": [
+      "Is the text correct in every frame, not only the first?",
+      "Do letters keep their shape, with no morphing or flicker?",
+      "Does the text stay on its surface as things move?",
+      "Craft of the shot"
     ]
   }
 ]

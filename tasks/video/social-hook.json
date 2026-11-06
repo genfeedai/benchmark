@@ -1,0 +1,41 @@
+{
+  "id": "social-hook",
+  "version": 1,
+  "medium": "video",
+  "isDraft": true,
+  "title": "First-second hook",
+  "rationale": "A vertical social clip lives or dies in its first second. This asks for one specific, striking opening shot and judges whether it would stop a scroll, whether it is the shot that was asked for, and whether it works with the sound off.",
+  "prompt": "The opening of a vertical social video for a coffee brand: a cup is knocked off a table, freezes in mid-air with the coffee suspended, then the camera whips around it. The first second must be impossible to scroll past. No text, no logo.",
+  "variants": [
+    {
+      "id": "sh-sneaker",
+      "prompt": "The opening of a vertical social video for a running shoe: a shoe lands in a puddle in extreme slow motion, the splash forming a crown, then normal speed snaps back as the runner leaves frame. No text, no logo."
+    },
+    {
+      "id": "sh-serum",
+      "prompt": "The opening of a vertical social video for a skincare brand: a single drop of serum falls onto glass and spreads into a perfect circle. Extreme macro, clean white light. No text, no logo."
+    },
+    {
+      "id": "sh-burger",
+      "prompt": "The opening of a vertical social video for a burger restaurant: a knife slices a burger in half straight toward the camera, cheese stretching between the halves. No text, no logo."
+    },
+    {
+      "id": "sh-kettlebell",
+      "prompt": "The opening of a vertical social video for a gym: a kettlebell drops onto a rubber floor right in front of the lens, chalk dust lifts, the camera jolts on impact. No text, no logo."
+    }
+  ],
+  "referenceRoles": [
+    "none"
+  ],
+  "outputSpec": {
+    "aspectRatio": "9:16",
+    "count": 1,
+    "durationSeconds": 5
+  },
+  "rubric": [
+    "Would you stop scrolling in the first second?",
+    "Is it the shot the prompt asked for?",
+    "Does it work with the sound off?",
+    "Craft, and no text or logo anywhere"
+  ]
+}

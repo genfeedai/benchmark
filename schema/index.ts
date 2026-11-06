@@ -28,6 +28,16 @@ export const REFERENCE_ROLE = [
   'transcript',
 ] as const;
 
+/**
+ * One public prompt in a task's prompt set. A match draws one variant, so a
+ * model cannot win a task by being good at a single sentence. Variants share
+ * the task's references, output spec and rubric; only the prompt changes.
+ */
+export const taskVariantSchema = z.object({
+  id: z.string().regex(/^[a-z0-9-]+$/),
+  prompt: z.string().min(1),
+});
+
 export const taskSchema = z.object({
   id: z.string().regex(/^[a-z0-9-]+$/),
   version: z.number().int().positive(),
@@ -37,8 +47,13 @@ export const taskSchema = z.object({
   title: z.string().min(1),
   /** Why this task separates models. Printed on the public task page. */
   rationale: z.string().min(1),
-  /** The exact public prompt. No hidden prompt, ever. */
+  /** The exact public prompt. No hidden prompt, ever. Shown on the task page. */
   prompt: z.string().min(1),
+  /**
+   * Further public prompts drawn for matches alongside `prompt`. Optional so a
+   * task can be a single prompt; the headline prompt is never repeated here.
+   */
+  variants: z.array(taskVariantSchema).default([]),
   referenceRoles: z.array(z.enum(REFERENCE_ROLE)).min(1),
   outputSpec: z.object({
     aspectRatio: z.string(),
@@ -110,6 +125,8 @@ export const matchSchema = z.object({
   seasonId: z.string(),
   taskId: z.string(),
   taskVersion: z.number().int().positive(),
+  /** Which task variant was drawn; null means the task's headline prompt. */
+  variantId: z.string().nullable().default(null),
   state: z.enum(MATCH_STATE),
   /** A and B are shuffled before judging; position carries no meaning. */
   a: answerSchema,
@@ -124,6 +141,7 @@ export const matchSchema = z.object({
 });
 
 export type Task = z.infer<typeof taskSchema>;
+export type TaskVariant = z.infer<typeof taskVariantSchema>;
 export type Contestant = z.infer<typeof contestantSchema>;
 export type Season = z.infer<typeof seasonSchema>;
 export type Match = z.infer<typeof matchSchema>;

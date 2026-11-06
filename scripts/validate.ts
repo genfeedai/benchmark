@@ -34,6 +34,16 @@ for (const path of taskPaths) {
   try {
     const task = taskSchema.parse(await readJson(path));
     if (tasks.has(task.id)) fail(path, `duplicate task id "${task.id}"`);
+    const variantIds = new Set<string>();
+    for (const variant of task.variants) {
+      if (variantIds.has(variant.id)) {
+        fail(path, `duplicate variant id "${variant.id}"`);
+      }
+      variantIds.add(variant.id);
+      if (variant.prompt.trim() === task.prompt.trim()) {
+        fail(path, `variant "${variant.id}" repeats the headline prompt`);
+      }
+    }
     tasks.set(task.id, task);
   } catch (error) {
     fail(path, error);
@@ -126,8 +136,21 @@ for (const path of await collect('data/seasons/*.json')) {
     seen.add(match.id);
     if (match.seasonId !== season.id) fail(at, 'match belongs to another season');
     if (!season.taskIds.includes(match.taskId)) fail(at, 'task not in season');
+    const task = tasks.get(match.taskId);
+    if (
+      task &&
+      match.variantId !== null &&
+      !task.variants.some((variant) => variant.id === match.variantId)
+    ) {
+      fail(at, `unknown variant "${match.variantId}" on task "${match.taskId}"`);
+    }
     if (match.a.contestantId === match.b.contestantId) {
       fail(at, 'a contestant cannot face itself');
+    }
+    for (const side of [match.a, match.b]) {
+      if (!season.contestantIds.includes(side.contestantId)) {
+        fail(at, `contestant "${side.contestantId}" is not entered in the season`);
+      }
     }
     /** Void matches never move Elo — the whole ladder depends on this. */
     if (match.state === 'void' && match.ratingChange !== null) {
@@ -136,7 +159,21 @@ for (const path of await collect('data/seasons/*.json')) {
     if (match.state === 'recorded') {
       recorded += 1;
       if (match.verdict === null) fail(at, 'recorded match has no verdict');
+      /** A tie voids the match; a recorded match must have a winner. */
+      if (match.verdict === 'void') {
+        fail(at, 'recorded match has a void verdict; record it as void');
+      }
       if (match.votes.length < 3) fail(at, 'recorded match has under 3 votes');
+      const judges = new Set(match.votes.map((vote) => vote.judgeModelId));
+      if (judges.size !== match.votes.length) {
+        fail(at, 'the same judge model voted twice');
+      }
+      const forA = match.votes.filter((vote) => vote.choice === 'a').length;
+      const forB = match.votes.filter((vote) => vote.choice === 'b').length;
+      const majority = forA > forB ? 'a' : forB > forA ? 'b' : 'void';
+      if (match.verdict !== majority) {
+        fail(at, `verdict "${match.verdict}" is not the vote majority`);
+      }
     }
   }
 
@@ -168,7 +205,11 @@ const SECRET_PATTERNS = [
   /Bearer\s+[A-Za-z0-9._-]{20,}/,
 ];
 
-for (const path of [...taskPaths, ...(await collect('data/**/*'))]) {
+for (const path of [
+  ...taskPaths,
+  ...(await collect('data/**/*')),
+  ...(await collect('fixtures/**/*')),
+]) {
   const file = Bun.file(path);
   if (file.type.startsWith('image/') || file.type.startsWith('video/')) continue;
   const text = await file.text().catch(() => '');

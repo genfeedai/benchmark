@@ -1,0 +1,42 @@
+{
+  "id": "native-audio-dialogue",
+  "version": 1,
+  "medium": "video",
+  "isDraft": true,
+  "title": "Spoken line with native audio",
+  "rationale": "Video models now generate sound with the picture, and social video is watched with sound on. This checks the three things that make a talking clip usable: the exact words, lips that match them, and ambient sound that belongs to the scene. Only contestants that generate audio can enter this task.",
+  "prompt": "Two friends at a café table. The woman says, exactly: \"You said it would take ten minutes.\" The man laughs and answers, exactly: \"I said about ten minutes.\" Café sound underneath, cups clinking. Single shot, no music.",
+  "variants": [
+    {
+      "id": "nad-beach-call",
+      "prompt": "A man on a windy beach answers his phone and says, exactly: \"I can't hear you, I'll call you back.\" Wind and waves loud in the sound. Handheld, single shot, no music."
+    },
+    {
+      "id": "nad-kitchen",
+      "prompt": "A grandmother in a kitchen tells the camera, exactly: \"The secret is you don't stir it.\" A pot bubbles beside her. Close-up, single shot, no music."
+    },
+    {
+      "id": "nad-meeting",
+      "prompt": "In a meeting room a woman stands and says to the table, exactly: \"Okay, let's ship it on Friday.\" Two people clap. Single shot, no music."
+    },
+    {
+      "id": "nad-whisper",
+      "prompt": "In a dark cinema a teenager leans over and whispers to her friend, exactly: \"Did you see that?\" The film's sound is faint in the background. Single shot, no music."
+    }
+  ],
+  "referenceRoles": [
+    "none"
+  ],
+  "outputSpec": {
+    "aspectRatio": "16:9",
+    "count": 1,
+    "durationSeconds": 8
+  },
+  "rubric": [
+    "Are the spoken words exactly the ones in the prompt, said by the right person?",
+    "Do the lips match the words?",
+    "Does the ambient sound belong to the scene, with no music?",
+    "Is the delivery natural for the moment?",
+    "Craft of the picture, once sound is judged"
+  ]
+}

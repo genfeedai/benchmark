@@ -1,0 +1,41 @@
+{
+  "id": "text-in-video",
+  "version": 1,
+  "medium": "video",
+  "isDraft": true,
+  "title": "Legible text in motion",
+  "rationale": "Text that is correct in frame one and melts by frame forty is the most common reason a generated clip cannot be used for a brand. This holds a short piece of copy on a surface while the camera or subject moves.",
+  "prompt": "A slow push-in on a shop window at night. Painted on the glass in gold letters, exactly: OPEN LATE. The letters stay legible and unchanged for the whole clip while reflections of passing cars slide across the glass.",
+  "variants": [
+    {
+      "id": "tiv-billboard",
+      "prompt": "A roadside billboard reads exactly: SLOW DOWN. The camera drives past it from left to right. The text stays correct as the perspective changes."
+    },
+    {
+      "id": "tiv-t-shirt",
+      "prompt": "A runner jogs toward the camera wearing a white T-shirt printed with, exactly: RUN CLUB 07. The print stays readable and unchanged as the fabric moves."
+    },
+    {
+      "id": "tiv-coffee-cup",
+      "prompt": "A hand turns a paper coffee cup on a counter to reveal a name written on it in marker, exactly: SAM. Close-up, continuous."
+    },
+    {
+      "id": "tiv-end-card",
+      "prompt": "An end card: on a plain off-white background the words FOLLOW FOR PART 2 appear one letter at a time and then hold. No other text."
+    }
+  ],
+  "referenceRoles": [
+    "none"
+  ],
+  "outputSpec": {
+    "aspectRatio": "9:16",
+    "count": 1,
+    "durationSeconds": 5
+  },
+  "rubric": [
+    "Is the text correct in every frame, not only the first?",
+    "Do letters keep their shape, with no morphing or flicker?",
+    "Does the text stay on its surface as things move?",
+    "Craft of the shot"
+  ]
+}

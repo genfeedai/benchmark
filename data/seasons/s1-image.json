@@ -12,7 +12,8 @@
     "brand-kit-fidelity",
     "character-consistency",
     "product-consistency",
-    "prompt-adherence"
+    "prompt-adherence",
+    "youtube-thumbnail"
   ],
   "contestantIds": [
     "genfeed-compiled.seedream-5-pro",
@@ -24,5 +25,5 @@
   ],
   "matchCount": 0,
   "ladder": [],
-  "updatedAt": "2026-09-10T00:00:00.000Z"
+  "updatedAt": "2026-11-06T00:00:00.000Z"
 }

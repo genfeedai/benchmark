@@ -1,13 +1,45 @@
 {
   "id": "camera-instruction",
-  "version": 1,
+  "version": 2,
   "medium": "video",
   "isDraft": true,
   "title": "Camera instruction",
   "rationale": "Whether the model can be directed. A generator that produces a lovely shot other than the one you asked for cannot be used in an edit.",
   "prompt": "Start on a close-up of a kettle beginning to steam. Push in slowly for two seconds, then whip-pan left to a person looking up from a laptop. No cuts.",
-  "referenceRoles": ["none"],
-  "outputSpec": { "aspectRatio": "16:9", "count": 1, "durationSeconds": 6 },
+  "variants": [
+    {
+      "id": "ci-pull-back",
+      "prompt": "Start on an extreme close-up of an eye. Pull back steadily for the whole shot until a woman is revealed standing alone in an empty car park. No cuts and no zoom: the camera physically moves back."
+    },
+    {
+      "id": "ci-orbit",
+      "prompt": "A slow half orbit around a chef plating a dish, starting behind his left shoulder and ending facing him. The camera stays at eye level. No cuts."
+    },
+    {
+      "id": "ci-crane-up",
+      "prompt": "Start at street level behind a cyclist waiting at a red light, then crane up smoothly to a high wide view of the junction as the light turns green and traffic moves. No cuts."
+    },
+    {
+      "id": "ci-locked-off",
+      "prompt": "A locked-off static shot of a kitchen doorway. The camera does not move at all: no drift, no shake, no zoom. A cat walks through the doorway from left to right and leaves the frame."
+    },
+    {
+      "id": "ci-rack-focus",
+      "prompt": "A rack focus: start sharp on raindrops on a window, then pull focus to a man reading a letter at a table behind the glass. The camera does not move. No cuts."
+    },
+    {
+      "id": "ci-tilt-up",
+      "prompt": "Tilt up slowly from a pair of muddy boots on a doorstep to the face of an old farmer looking out at the rain. Only tilt: the camera does not travel. No cuts."
+    }
+  ],
+  "referenceRoles": [
+    "none"
+  ],
+  "outputSpec": {
+    "aspectRatio": "16:9",
+    "count": 1,
+    "durationSeconds": 6
+  },
   "rubric": [
     "Is the requested camera move the one performed?",
     "Is it genuinely one continuous shot?",
