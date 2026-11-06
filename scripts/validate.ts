@@ -72,11 +72,14 @@ try {
  * A bench whose only entrant is its own author is a scoreboard. The registry
  * must always be able to show Genfeed losing to something.
  */
-const compiled = [...contestants.values()].filter((one) => one.isCompiled);
-const raw = [...contestants.values()].filter((one) => !one.isCompiled);
-if (compiled.length < 1) fail('data/contestants.json', 'no compiled contestant');
+const active = [...contestants.values()].filter((one) => one.retiredAt === null);
+const compiled = active.filter((one) => one.isCompiled);
+const raw = active.filter((one) => !one.isCompiled);
+if (compiled.length < 1) {
+  fail('data/contestants.json', 'no active compiled contestant');
+}
 if (raw.length < 4) {
-  fail('data/contestants.json', `only ${raw.length} raw contestants, need 4`);
+  fail('data/contestants.json', `only ${raw.length} active raw contestants, need 4`);
 }
 
 for (const path of await collect('data/seasons/*.json')) {
@@ -105,6 +108,8 @@ for (const path of await collect('data/seasons/*.json')) {
     if (!contestant) fail(path, `unknown contestant "${id}"`);
     else if (!contestant.mediums.includes(season.medium)) {
       fail(path, `contestant "${id}" does not do ${season.medium}`);
+    } else if (contestant.retiredAt !== null && season.state !== 'closed') {
+      fail(path, `contestant "${id}" is retired and cannot enter an ${season.state} season`);
     }
   }
 
