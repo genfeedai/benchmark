@@ -14,7 +14,7 @@ minutes out. Its contestants are routes (script, presenter, B-roll and edit toge
 compiled route and the raw avatar model it calls can meet in the same match.
 
 `kinetic-typography` is a route task too: a video model and a code-rendered composition
-(Remotion, HyperFrames or similar) answer the same brand-kit brief and are judged blind.
+(Remotion or an HTML-based framework) answer the same brand-kit brief and are judged blind.
 
 `native-audio-dialogue` only admits contestants that generate sound with the picture.
 

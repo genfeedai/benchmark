@@ -4,7 +4,7 @@
   "medium": "video",
   "isDraft": true,
   "title": "Kinetic typography",
-  "rationale": "Text-led motion is the most posted video format for brands and the one generative video handles worst. Contestants are routes, not single models, so a video model and a code-rendered composition (for example Remotion or HyperFrames, see genfeedai/genfeed.ai#9570) meet on the same brief and are judged blind on the same output.",
+  "rationale": "Text-led motion is the most posted video format for brands and the one generative video handles worst. Contestants are routes, not single models, so a video model and a code-rendered composition (for example Remotion or an HTML-based framework, see genfeedai/genfeed.ai#9570) meet on the same brief and are judged blind on the same output.",
   "prompt": "A 10-second vertical kinetic-typography clip for the brand in the supplied kit. On screen, in order, one line at a time, exactly:\nMOST STUDIOS QUIT\nIN 90 DAYS\nNOT BECAUSE THEY'RE LAZY\nBECAUSE THEY WAIT\nTO BE FINISHED\nEnd on the kit wordmark. Kit palette and rules throughout; lines never overlap; each line holds long enough to read.",
   "variants": [
     {
